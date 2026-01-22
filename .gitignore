@@ -1,0 +1,6 @@
+data/
+docs/
+imgshape/
+.env
+models/
+__pycache__/
