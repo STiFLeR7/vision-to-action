@@ -1,0 +1,51 @@
+# Training Configuration for YOLOv8
+
+training:
+  # Hardware-constrained settings
+  device: "cuda:0"
+  precision: "fp16"
+  batch_size: 4
+  gradient_accumulation_steps: 4
+  
+  # Training parameters
+  epochs: 100
+  patience: 20  # early stopping
+  
+  optimizer:
+    name: "AdamW"
+    lr: 0.001
+    weight_decay: 0.0005
+    
+  scheduler:
+    name: "CosineAnnealingLR"
+    warmup_epochs: 3
+    
+  # Data augmentation (via imgshape)
+  augmentation:
+    enable: true
+    use_imgshape_planning: true
+    strategy: "light"  # light | moderate | aggressive
+    
+  # Validation
+  validation:
+    split: 0.2
+    frequency: 1  # validate every N epochs
+    
+  # Checkpointing
+  checkpointing:
+    save_best: true
+    save_last: true
+    save_every_n_epochs: 10
+    
+# Detection-specific training
+detection:
+  task: "detect"
+  pretrained: true
+  freeze_backbone_epochs: 5
+  
+# Segmentation-specific training (conditional)
+segmentation:
+  task: "segment"
+  pretrained: true
+  freeze_encoder: true
+  train_decoder_only: true

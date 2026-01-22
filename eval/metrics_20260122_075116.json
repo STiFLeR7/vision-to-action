@@ -1,0 +1,1130 @@
+{
+  "test_info": {
+    "timestamp": "2026-01-22T07:48:20.908121+00:00",
+    "test_dir": "D:\\vision-to-action\\data\\test",
+    "total_images": 22,
+    "hardware": "NVIDIA RTX 3050 6GB"
+  },
+  "perception_layer": {
+    "total_detections": 21,
+    "images_with_detections": 12,
+    "images_without_detections": 10,
+    "fps": [
+      1.8769906659050288,
+      15.182293803651454,
+      16.4184471085024,
+      15.61906963587799,
+      14.847831994523384,
+      15.1105335493239,
+      16.47671757509411,
+      16.35665356383376,
+      16.753393402634195,
+      16.30738773763571,
+      15.064778546882426,
+      17.02530470833843,
+      15.920169900086597,
+      15.55163999513621,
+      15.512461936830624,
+      16.67761829773371,
+      2.6622834832366475,
+      10.855724166217229,
+      11.328286961118913,
+      16.874760594816482,
+      7.999321657945633,
+      16.39787811273236
+    ],
+    "latency_ms": [
+      532.7677000022959,
+      65.86619999143295,
+      60.90710000717081,
+      64.02429999434389,
+      67.34989999677055,
+      66.17900001583621,
+      60.691699996823445,
+      61.13719998393208,
+      59.68939999002032,
+      61.32189999334514,
+      66.38000000384636,
+      58.736100007081404,
+      62.813399999868125,
+      64.30190001265146,
+      64.46429999778047,
+      59.96060001780279,
+      375.6173999863677,
+      92.11730002425611,
+      88.27459998428822,
+      59.26009998074733,
+      125.01059999340214,
+      60.983500006841496
+    ],
+    "confidence_scores": [
+      0.8017578125,
+      0.55078125,
+      0.267333984375,
+      0.51953125,
+      0.30029296875,
+      0.2861328125,
+      0.2509765625,
+      0.4111328125,
+      0.38671875,
+      0.32861328125,
+      0.9365234375,
+      0.80419921875,
+      0.31396484375,
+      0.26806640625,
+      0.5009765625,
+      0.416748046875,
+      0.7080078125,
+      0.6611328125,
+      0.73876953125,
+      0.89892578125,
+      0.533203125
+    ],
+    "detections_per_image": [
+      1,
+      2,
+      1,
+      0,
+      3,
+      0,
+      3,
+      4,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "avg_latency_ms": 103.53882727213204,
+    "avg_fps": 13.946343063548056,
+    "avg_confidence": 0.5182756696428571,
+    "min_confidence": 0.2509765625,
+    "max_confidence": 0.9365234375
+  },
+  "ingestion_layer": {
+    "events_stored": 22,
+    "storage_latency_ms": [
+      0.9231999865733087,
+      2.3455999908037484,
+      0.8387000125367194,
+      2.3064000124577433,
+      2.3295999853871763,
+      2.259300003061071,
+      0.6911999953445047,
+      2.430399996228516,
+      2.5118999765254557,
+      2.580800006398931,
+      0.760800001444295,
+      2.3129000037442893,
+      0.7461000059265643,
+      2.3935000062920153,
+      0.7471999851986766,
+      2.5381000014021993,
+      9.401699993759394,
+      1.5208999975584447,
+      1.6463999927509576,
+      2.2299999836832285,
+      2.065200009383261,
+      0.694699992891401
+    ],
+    "avg_event_size_bytes": [
+      750,
+      973,
+      750,
+      532,
+      1267,
+      558,
+      1201,
+      1416,
+      540,
+      765,
+      763,
+      538,
+      761,
+      767,
+      772,
+      560,
+      604,
+      540,
+      572,
+      540,
+      1040,
+      542
+    ],
+    "avg_latency_ms": 2.103390906334177,
+    "avg_size_bytes": 761.4090909090909
+  },
+  "cognition_layer": {
+    "summaries_generated": 22,
+    "latency_ms": [
+      1632.937199989101,
+      1817.2109999868553,
+      1865.3462999791373,
+      2145.7223999896087,
+      2299.4960000214633,
+      2024.2563000065275,
+      2302.1883000037633,
+      2548.540999996476,
+      2171.549699996831,
+      1865.256799996132,
+      1747.6413999975193,
+      1642.5962999928743,
+      2194.9269000033382,
+      1787.1311000199057,
+      1385.0606000050902,
+      1586.9763999944553,
+      2016.9816999987233,
+      2022.0024000154808,
+      2035.6720999989193,
+      1994.7964000166394,
+      1765.862800006289,
+      2179.263300000457
+    ],
+    "token_counts": [],
+    "failures": 0,
+    "avg_latency_ms": 1955.9734727279813,
+    "success_rate": 1.0
+  },
+  "ai_detection": {
+    "total_analyzed": 22,
+    "ai_generated_count": 15,
+    "original_count": 7,
+    "avg_ai_confidence": [
+      0.504,
+      0.49300000000000005,
+      0.439,
+      0.5733333333333334,
+      0.513,
+      0.463,
+      0.516,
+      0.48700000000000004,
+      0.5890000000000002,
+      0.5890000000000002,
+      0.5930000000000001,
+      0.5430000000000001,
+      0.49900000000000005,
+      0.49900000000000005,
+      0.5290000000000001,
+      0.5930000000000002,
+      0.4696666666666667,
+      0.5590000000000002,
+      0.5920000000000001,
+      0.5890000000000002,
+      0.5073333333333334,
+      0.5870000000000001
+    ],
+    "latency_ms": [
+      3100.396900001215,
+      5512.286200013477,
+      2883.163799997419,
+      2963.612799998373,
+      1088.1339000188746,
+      6179.1186000045855,
+      2331.4540999999736,
+      2333.3996000001207,
+      3060.469700023532,
+      2788.2992000086233,
+      1792.4935999908485,
+      723.9659000188112,
+      3044.3585999892093,
+      2838.876199995866,
+      2907.5947999954224,
+      4175.808200001484,
+      56575.52579999901,
+      2937.3860000050627,
+      2410.0064000231214,
+      3137.9109999979846,
+      14778.039800003171,
+      1593.220399983693
+    ],
+    "avg_latency_ms": 5870.705522730449,
+    "avg_confidence": 0.5330151515151516,
+    "ai_generated_pct": 68.18181818181817
+  },
+  "end_to_end": {
+    "total_latency_ms": [
+      5311.456600000383,
+      7477.914100018097,
+      4824.270999990404,
+      5227.972599997884,
+      3470.2250999980606,
+      8355.815300019458,
+      4723.364600009518,
+      4983.7077999836765,
+      5346.129999990808,
+      4743.446100008441,
+      3631.51779997861,
+      2429.7627999912947,
+      5358.322699990822,
+      4731.0283000115305,
+      4376.504600018961,
+      5842.079599999124,
+      59298.83620000328,
+      5096.574700000929,
+      4580.074600002263,
+      5217.402899987064,
+      16844.810000009602,
+      3867.505300004268
+    ],
+    "success_rate": 1.0,
+    "workflow_trigger_accuracy": 0.5454545454545454,
+    "avg_latency_ms": 7988.123759091567,
+    "min_latency_ms": 2429.7627999912947,
+    "max_latency_ms": 59298.83620000328,
+    "manual_effort_reduction_pct": 73.37292080302811
+  },
+  "per_image_results": [
+    {
+      "image": "5v5.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.504,
+        "original_confidence": 0.496,
+        "latency_ms": 3100.396900001215,
+        "explanation": "Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 532.7677000022959,
+        "fps": 1.8769906659050288,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.8017578125,
+            "bbox": "x1=145.0 y1=26.0 x2=639.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_5v5_1769068104",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_5v5_1769068104.json",
+        "latency_ms": 0.9231999865733087,
+        "size_bytes": 750
+      },
+      "cognition": {
+        "summary": "The image `D:\\vision-to-action\\data\\test\\5v5.png` (1920x1080) contains one detected object: a single person. The person is located within the bounding box (145, 26, 639, 639) and the detection has a confidence score of 0.80. No other objects were detected.\n",
+        "latency_ms": 1632.937199989101,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5311.456600000383
+      }
+    },
+    {
+      "image": "abstract.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.49300000000000005,
+        "original_confidence": 0.5069999999999999,
+        "latency_ms": 5512.286200013477,
+        "explanation": "Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 2,
+        "latency_ms": 65.86619999143295,
+        "fps": 15.182293803651454,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.55078125,
+            "bbox": "x1=141.0 y1=0.0 x2=625.0 y2=638.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.267333984375,
+            "bbox": "x1=292.0 y1=432.0 x2=375.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_abstract_1769068111",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_abstract_1769068111.json",
+        "latency_ms": 2.3455999908037484,
+        "size_bytes": 973
+      },
+      "cognition": {
+        "summary": "The image contains two detected object types: a person and a tie. A single person was detected with a bounding box spanning the upper left quadrant of the image (141, 0, 625, 638) and a confidence of 0.55. A single tie was detected within the person's bounding box, specifically in the lower center region (292, 432, 375, 640), with a lower confidence of 0.27. The tie detection is likely associated with the detected person.\n",
+        "latency_ms": 1817.2109999868553,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 7477.914100018097
+      }
+    },
+    {
+      "image": "ACE 2.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.439,
+        "original_confidence": 0.5609999999999999,
+        "latency_ms": 2883.163799997419,
+        "explanation": "Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 60.90710000717081,
+        "fps": 16.4184471085024,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.51953125,
+            "bbox": "x1=9.0 y1=20.0 x2=493.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_ACE 2_1769068116",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ACE 2_1769068116.json",
+        "latency_ms": 0.8387000125367194,
+        "size_bytes": 750
+      },
+      "cognition": {
+        "summary": "The image \"ACE 2.png\" contains one detected object: a single person. The person's bounding box is located at (9, 20, 493, 639) and the detection confidence is 0.52. The person occupies a significant portion of the left side of the image.\n",
+        "latency_ms": 1865.3462999791373,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4824.270999990404
+      }
+    },
+    {
+      "image": "ACE.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5733333333333334,
+        "original_confidence": 0.42666666666666664,
+        "latency_ms": 2963.612799998373,
+        "explanation": "Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 64.02429999434389,
+        "fps": 15.61906963587799,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_ACE_1769068121",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ACE_1769068121.json",
+        "latency_ms": 2.3064000124577433,
+        "size_bytes": 532
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nNo objects were detected in the image \"D:\\vision-to-action\\data\\test\\ACE.png\" at timestamp 2026-01-22 07:48:41.603486+00:00 during Event ID eval_ACE_1769068121. Therefore, there is no information available regarding object types, spatial distribution, confidence levels, or patterns. This suggests a potential issue with the detection algorithm, image quality, or the absence of target objects in the image.\n",
+        "latency_ms": 2145.7223999896087,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5227.972599997884
+      }
+    },
+    {
+      "image": "Blue Modern Corporate Staff Profile LinkedIn Banner.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.513,
+        "original_confidence": 0.487,
+        "latency_ms": 1088.1339000188746,
+        "explanation": "Multiple AI indicators detected (4 signals); Unnaturally uniform texture patterns (LBP); Violates Benford's Law distribution; Over-smoothed color gradients; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 3,
+        "latency_ms": 67.34989999677055,
+        "fps": 14.847831994523384,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.30029296875,
+            "bbox": "x1=3.0 y1=1.0 x2=627.0 y2=639.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.2861328125,
+            "bbox": "x1=348.0 y1=0.0 x2=379.0 y2=367.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.2509765625,
+            "bbox": "x1=390.0 y1=0.0 x2=485.0 y2=612.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_Blue Modern Corporate Staff Profile LinkedIn Banner_1769068124",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_Blue Modern Corporate Staff Profile LinkedIn Banner_1769068124.json",
+        "latency_ms": 2.3295999853871763,
+        "size_bytes": 1267
+      },
+      "cognition": {
+        "summary": "This image, \"Blue Modern Corporate Staff Profile LinkedIn Banner.png\", contains detections for a person and two ties. A single person was detected with low confidence (0.30) and a bounding box spanning a large portion of the image (top-left corner to near the center). Two ties were detected with similarly low confidence (0.29 and 0.25), located near the detected person. The low confidence scores suggest the detections may be inaccurate or incomplete. Further investigation or model retraining might be needed to improve detection accuracy.\n",
+        "latency_ms": 2299.4960000214633,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 3470.2250999980606
+      }
+    },
+    {
+      "image": "ecosystem-gemini.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.463,
+        "original_confidence": 0.5369999999999999,
+        "latency_ms": 6179.1186000045855,
+        "explanation": "Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 66.17900001583621,
+        "fps": 15.1105335493239,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_ecosystem-gemini_1769068133",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ecosystem-gemini_1769068133.json",
+        "latency_ms": 2.259300003061071,
+        "size_bytes": 558
+      },
+      "cognition": {
+        "summary": "No objects were detected in the image \"D:\\vision-to-action\\data\\test\\ecosystem-gemini.png\" at timestamp 2026-01-22 07:48:53.551440+00:00 during Event ID eval_ecosystem-gemini_1769068133. Therefore, there is no information available regarding object types, spatial distribution, confidence levels, or patterns.\n",
+        "latency_ms": 2024.2563000065275,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 8355.815300019458
+      }
+    },
+    {
+      "image": "ecosystem-gpt.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.516,
+        "original_confidence": 0.484,
+        "latency_ms": 2331.4540999999736,
+        "explanation": "Matches common AI generator dimensions; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 3,
+        "latency_ms": 60.691699996823445,
+        "fps": 16.47671757509411,
+        "detections": [
+          {
+            "class": "scissors",
+            "confidence": 0.4111328125,
+            "bbox": "x1=11.0 y1=456.0 x2=186.0 y2=563.0"
+          },
+          {
+            "class": "tv",
+            "confidence": 0.38671875,
+            "bbox": "x1=194.0 y1=208.0 x2=442.0 y2=387.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.32861328125,
+            "bbox": "x1=536.0 y1=475.0 x2=638.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_ecosystem-gpt_1769068137",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ecosystem-gpt_1769068137.json",
+        "latency_ms": 0.6911999953445047,
+        "size_bytes": 1201
+      },
+      "cognition": {
+        "summary": "The image `ecosystem-gpt.png` contains three detected objects: scissors, a TV, and a person. The scissors are located in the lower left quadrant of the image (bbox=(11, 456, 186, 563)) with a confidence of 0.41. A TV is detected in the upper central region (bbox=(194, 208, 442, 387)) with a confidence of 0.39. A person is detected in the lower right quadrant (bbox=(536, 475, 638, 640)) with the lowest confidence of 0.33. The confidence levels are relatively low across all detections.\n",
+        "latency_ms": 2302.1883000037633,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4723.364600009518
+      }
+    },
+    {
+      "image": "ecosystem.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.48700000000000004,
+        "original_confidence": 0.5129999999999999,
+        "latency_ms": 2333.3996000001207,
+        "explanation": "Matches common AI generator dimensions; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 4,
+        "latency_ms": 61.13719998393208,
+        "fps": 16.35665356383376,
+        "detections": [
+          {
+            "class": "laptop",
+            "confidence": 0.9365234375,
+            "bbox": "x1=499.0 y1=442.0 x2=638.0 y2=583.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.80419921875,
+            "bbox": "x1=88.0 y1=135.0 x2=384.0 y2=549.0"
+          },
+          {
+            "class": "snowboard",
+            "confidence": 0.31396484375,
+            "bbox": "x1=457.0 y1=157.0 x2=588.0 y2=324.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.26806640625,
+            "bbox": "x1=29.0 y1=475.0 x2=69.0 y2=533.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_ecosystem_1769068142",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ecosystem_1769068142.json",
+        "latency_ms": 2.430399996228516,
+        "size_bytes": 1416
+      },
+      "cognition": {
+        "summary": "The image `D:\\vision-to-action\\data\\test\\ecosystem.png` contains four detected object categories: laptop, person, and snowboard. A laptop was detected in the center of the image with high confidence (0.94). Two people were detected on the left side of the image, one with high confidence (0.80) and another with very low confidence (0.27). A snowboard was detected in the upper-center of the image with low confidence (0.31). The significant difference in confidence for the two detected people suggests one detection may be a false positive or a partially occluded person. The low confidence on the snowboard detection also warrants further investigation.\n",
+        "latency_ms": 2548.540999996476,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4983.7077999836765
+      }
+    },
+    {
+      "image": "HOUSTON.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5890000000000002,
+        "original_confidence": 0.4109999999999998,
+        "latency_ms": 3060.469700023532,
+        "explanation": "Multiple AI indicators detected (4 signals); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.68939999002032,
+        "fps": 16.753393402634195,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_HOUSTON_1769068148",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_HOUSTON_1769068148.json",
+        "latency_ms": 2.5118999765254557,
+        "size_bytes": 540
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nNo objects were detected in the image \"D:\\vision-to-action\\data\\test\\HOUSTON.png\" during the evaluation event \"eval_HOUSTON_1769068148\" at timestamp 2026-01-22 07:49:08.457578+00:00. Therefore, there is no information available regarding object types, spatial distribution, or confidence levels. This suggests a potential issue with the detection algorithm's performance on this specific image.\n",
+        "latency_ms": 2171.549699996831,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5346.129999990808
+      }
+    },
+    {
+      "image": "I MISS HER.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5890000000000002,
+        "original_confidence": 0.4109999999999998,
+        "latency_ms": 2788.2992000086233,
+        "explanation": "Multiple AI indicators detected (4 signals); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 61.32189999334514,
+        "fps": 16.30738773763571,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.5009765625,
+            "bbox": "x1=280.0 y1=507.0 x2=339.0 y2=563.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_I MISS HER_1769068153",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_I MISS HER_1769068153.json",
+        "latency_ms": 2.580800006398931,
+        "size_bytes": 765
+      },
+      "cognition": {
+        "summary": "The image \"D:\\vision-to-action\\data\\test\\I MISS HER.png\" contains one detected object: a person. This person is located in the bounding box (280, 507, 339, 563) with a confidence score of 0.50. No other objects were detected.\n",
+        "latency_ms": 1865.256799996132,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4743.446100008441
+      }
+    },
+    {
+      "image": "imgshape.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5930000000000001,
+        "original_confidence": 0.4069999999999999,
+        "latency_ms": 1792.4935999908485,
+        "explanation": "Multiple AI indicators detected (5 signals); Unnaturally uniform texture patterns (LBP); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 66.38000000384636,
+        "fps": 15.064778546882426,
+        "detections": [
+          {
+            "class": "clock",
+            "confidence": 0.416748046875,
+            "bbox": "x1=428.0 y1=192.0 x2=564.0 y2=438.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_imgshape_1769068157",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_imgshape_1769068157.json",
+        "latency_ms": 0.760800001444295,
+        "size_bytes": 763
+      },
+      "cognition": {
+        "summary": "On January 22, 2026, at 07:49:17 UTC, an image \"D:\\vision-to-action\\data\\test\\imgshape.png\" (2816x1536 pixels) was analyzed. One object category, \"clock,\" was detected. A single instance of a clock was found with a bounding box at (428, 192, 564, 438) and a confidence score of 0.42.\n",
+        "latency_ms": 1747.6413999975193,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 3631.51779997861
+      }
+    },
+    {
+      "image": "INFERNO.jpg",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5430000000000001,
+        "original_confidence": 0.45699999999999985,
+        "latency_ms": 723.9659000188112,
+        "explanation": "Multiple AI indicators detected (5 signals); Unnaturally uniform texture patterns (LBP); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 58.736100007081404,
+        "fps": 17.02530470833843,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_INFERNO_1769068159",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_INFERNO_1769068159.json",
+        "latency_ms": 2.3129000037442893,
+        "size_bytes": 538
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nNo objects were detected in the image \"D:\\vision-to-action\\data\\test\\INFERNO.jpg\" during event eval_INFERNO_1769068159 at timestamp 2026-01-22 07:49:19.793084+00:00. Therefore, there is no spatial distribution, confidence levels, or patterns to report.\n",
+        "latency_ms": 1642.5962999928743,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 2429.7627999912947
+      }
+    },
+    {
+      "image": "KOSMIK 2.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.49900000000000005,
+        "original_confidence": 0.5009999999999999,
+        "latency_ms": 3044.3585999892093,
+        "explanation": "Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 62.813399999868125,
+        "fps": 15.920169900086597,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.7080078125,
+            "bbox": "x1=205.0 y1=372.0 x2=271.0 y2=635.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_KOSMIK 2_1769068164",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_KOSMIK 2_1769068164.json",
+        "latency_ms": 0.7461000059265643,
+        "size_bytes": 761
+      },
+      "cognition": {
+        "summary": "Summary of detection results for image `D:\\vision-to-action\\data\\test\\KOSMIK 2.png` (Event ID: eval_KOSMIK 2_1769068164, Timestamp: 2026-01-22 07:49:24.601287+00:00):\n\nOne person was detected with a confidence of 0.71. The bounding box for the detected person is located at (205, 372, 271, 635).\n",
+        "latency_ms": 2194.9269000033382,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5358.322699990822
+      }
+    },
+    {
+      "image": "KOSMIKBOIII.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.49900000000000005,
+        "original_confidence": 0.5009999999999999,
+        "latency_ms": 2838.876199995866,
+        "explanation": "Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 64.30190001265146,
+        "fps": 15.55163999513621,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.6611328125,
+            "bbox": "x1=154.0 y1=185.0 x2=501.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_KOSMIKBOIII_1769068169",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_KOSMIKBOIII_1769068169.json",
+        "latency_ms": 2.3935000062920153,
+        "size_bytes": 767
+      },
+      "cognition": {
+        "summary": "The image \"D:\\vision-to-action\\data\\test\\KOSMIKBOIII.png\" contains one detected person. The person is located within the bounding box (154, 185, 501, 639) and the detection has a confidence score of 0.66. No other objects were detected.\n",
+        "latency_ms": 1787.1311000199057,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4731.0283000115305
+      }
+    },
+    {
+      "image": "NEO STREAM 01.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5290000000000001,
+        "original_confidence": 0.47099999999999986,
+        "latency_ms": 2907.5947999954224,
+        "explanation": "Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 64.46429999778047,
+        "fps": 15.512461936830624,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.73876953125,
+            "bbox": "x1=155.0 y1=188.0 x2=502.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_NEO STREAM 01_1769068174",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_NEO STREAM 01_1769068174.json",
+        "latency_ms": 0.7471999851986766,
+        "size_bytes": 772
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nThe image \"NEO STREAM 01.png\" contains one detected object: a single person. The person's bounding box is located at (155, 188, 502, 640) with a confidence score of 0.74. No other objects were detected.\n",
+        "latency_ms": 1385.0606000050902,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4376.504600018961
+      }
+    },
+    {
+      "image": "PATEL_HILL_137881.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5930000000000002,
+        "original_confidence": 0.4069999999999998,
+        "latency_ms": 4175.808200001484,
+        "explanation": "Multiple AI indicators detected (6 signals); Unnaturally uniform texture patterns (LBP); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Suspiciously perfect patch-level coherence; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.96060001780279,
+        "fps": 16.67761829773371,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_PATEL_HILL_137881_1769068180",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_PATEL_HILL_137881_1769068180.json",
+        "latency_ms": 2.5381000014021993,
+        "size_bytes": 560
+      },
+      "cognition": {
+        "summary": "Summary:\n\nNo objects were detected in the image D:\\vision-to-action\\data\\test\\PATEL_HILL_137881.png at timestamp 2026-01-22 07:49:40.158269+00:00. Therefore, there is no spatial distribution, confidence levels, or patterns to report.\n",
+        "latency_ms": 1586.9763999944553,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5842.079599999124
+      }
+    },
+    {
+      "image": "pexels-david-kanigan-239927285-15347286.jpg",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": "False",
+        "ai_confidence": 0.4696666666666667,
+        "original_confidence": 0.5303333333333333,
+        "latency_ms": 56575.52579999901,
+        "explanation": "Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 375.6173999863677,
+        "fps": 2.6622834832366475,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_pexels-david-kanigan-239927285-15347286_1769068239",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_pexels-david-kanigan-239927285-15347286_1769068239.json",
+        "latency_ms": 9.401699993759394,
+        "size_bytes": 604
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nNo objects were detected in the image \"D:\\vision-to-action\\data\\test\\pexels-david-kanigan-239927285-15347286.jpg\" at timestamp 2026-01-22 07:50:39.021294+00:00. Therefore, there is no spatial distribution, confidence levels, or patterns to report.\n",
+        "latency_ms": 2016.9816999987233,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 59298.83620000328
+      }
+    },
+    {
+      "image": "STIFLER.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5590000000000002,
+        "original_confidence": 0.44099999999999984,
+        "latency_ms": 2937.3860000050627,
+        "explanation": "Multiple AI indicators detected (4 signals); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 92.11730002425611,
+        "fps": 10.855724166217229,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_STIFLER_1769068244",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_STIFLER_1769068244.json",
+        "latency_ms": 1.5208999975584447,
+        "size_bytes": 540
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nNo objects were detected in the image \"D:\\vision-to-action\\data\\test\\STIFLER.png\" during the evaluation of event ID \"eval_STIFLER_1769068244\" at timestamp 2026-01-22 07:50:44.127452+00:00. Therefore, there is no spatial distribution, confidence levels, or patterns to report.\n",
+        "latency_ms": 2022.0024000154808,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5096.574700000929
+      }
+    },
+    {
+      "image": "The Myth vs The Reality.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5920000000000001,
+        "original_confidence": 0.4079999999999999,
+        "latency_ms": 2410.0064000231214,
+        "explanation": "Multiple AI indicators detected (4 signals); Matches common AI generator dimensions; Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 88.27459998428822,
+        "fps": 11.328286961118913,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_The Myth vs The Reality_1769068248",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_The Myth vs The Reality_1769068248.json",
+        "latency_ms": 1.6463999927509576,
+        "size_bytes": 572
+      },
+      "cognition": {
+        "summary": "No objects were detected in the image \"D:\\vision-to-action\\data\\test\\The Myth vs The Reality.png\" at timestamp 2026-01-22 07:50:48.694165+00:00 during Event ID eval_The Myth vs The Reality_1769068248. Therefore, there is no spatial distribution, confidence levels, or patterns to report.\n",
+        "latency_ms": 2035.6720999989193,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 4580.074600002263
+      }
+    },
+    {
+      "image": "UNIVERY.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5890000000000002,
+        "original_confidence": 0.4109999999999998,
+        "latency_ms": 3137.9109999979846,
+        "explanation": "Multiple AI indicators detected (5 signals); Unnaturally uniform texture patterns (LBP); Violates Benford's Law distribution; Over-smoothed color gradients; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.26009998074733,
+        "fps": 16.874760594816482,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_UNIVERY_1769068253",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_UNIVERY_1769068253.json",
+        "latency_ms": 2.2299999836832285,
+        "size_bytes": 540
+      },
+      "cognition": {
+        "summary": "No objects were detected in the image \"D:\\vision-to-action\\data\\test\\UNIVERY.png\" during event eval_UNIVERY_1769068253 at timestamp 2026-01-22 07:50:53.951879+00:00. Therefore, there is no spatial distribution, confidence levels, or patterns to report.\n",
+        "latency_ms": 1994.7964000166394,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 5217.402899987064
+      }
+    },
+    {
+      "image": "WhatsApp Image 2025-09-24 at 14.03.08.jpeg",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5073333333333334,
+        "original_confidence": 0.4926666666666666,
+        "latency_ms": 14778.039800003171,
+        "explanation": "Violates Benford's Law distribution; Severe high-frequency suppression (AI smoothing); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 2,
+        "latency_ms": 125.01059999340214,
+        "fps": 7.999321657945633,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.89892578125,
+            "bbox": "x1=33.0 y1=252.0 x2=515.0 y2=639.0"
+          },
+          {
+            "class": "cell phone",
+            "confidence": 0.533203125,
+            "bbox": "x1=243.0 y1=329.0 x2=333.0 y2=465.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_WhatsApp Image 2025-09-24 at 14.03.08_1769068271",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_WhatsApp Image 2025-09-24 at 14.03.08_1769068271.json",
+        "latency_ms": 2.065200009383261,
+        "size_bytes": 1040
+      },
+      "cognition": {
+        "summary": "The image \"WhatsApp Image 2025-09-24 at 14.03.08.jpeg\" contains two detected object types: a person and a cell phone. A single person was detected with high confidence (0.90) in the bounding box (33, 252, 515, 639). A single cell phone was detected with moderate confidence (0.53) in the bounding box (243, 329, 333, 465). The cell phone bounding box is spatially located within the general area of the person's bounding box, suggesting a possible interaction.\n",
+        "latency_ms": 1765.862800006289,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 16844.810000009602
+      }
+    },
+    {
+      "image": "WORKFLOW.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "AI-Generated",
+        "is_ai_generated": "True",
+        "ai_confidence": 0.5870000000000001,
+        "original_confidence": 0.4129999999999999,
+        "latency_ms": 1593.220399983693,
+        "explanation": "Matches common AI generator dimensions; Violates Benford's Law distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 60.983500006841496,
+        "fps": 16.39787811273236,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_WORKFLOW_1769068274",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_WORKFLOW_1769068274.json",
+        "latency_ms": 0.694699992891401,
+        "size_bytes": 542
+      },
+      "cognition": {
+        "summary": "**Summary:**\n\nNo objects were detected in the image \"D:\\vision-to-action\\data\\test\\WORKFLOW.png\" during the evaluation run \"eval_WORKFLOW_1769068274\" at timestamp 2026-01-22 07:51:14.482927+00:00. Therefore, there is no spatial distribution, confidence levels, or patterns to report. This suggests a potential issue with the detection model's performance on this specific image or a genuine absence of the target objects.\n",
+        "latency_ms": 2179.263300000457,
+        "success": true
+      },
+      "timings": {
+        "end_to_end_ms": 3867.505300004268
+      }
+    }
+  ]
+}

@@ -1,0 +1,1105 @@
+{
+  "test_info": {
+    "timestamp": "2026-01-22T07:39:42.034848+00:00",
+    "test_dir": "D:\\vision-to-action\\data\\test",
+    "total_images": 22,
+    "hardware": "NVIDIA RTX 3050 6GB"
+  },
+  "perception_layer": {
+    "total_detections": 21,
+    "images_with_detections": 12,
+    "images_without_detections": 10,
+    "fps": [
+      1.5503549072315022,
+      49.210176620564326,
+      58.36996055239353,
+      51.525940682678474,
+      59.041636130014595,
+      51.85215914502563,
+      40.94719043301605,
+      45.828044013657966,
+      59.00610123267535,
+      33.81462820007173,
+      38.99334775004185,
+      60.18404288734941,
+      37.58169317734964,
+      37.414787831204066,
+      50.546406650361924,
+      55.51237925709094,
+      8.954419318875845,
+      16.30361238763387,
+      16.826830048072576,
+      15.721910839358996,
+      13.082669386042808,
+      16.742510231449785
+    ],
+    "latency_ms": [
+      645.0136000057682,
+      20.321000018157065,
+      17.132099979789928,
+      19.40770001965575,
+      16.937200009124354,
+      19.285599992144853,
+      24.421699985396117,
+      21.820699999807402,
+      16.947399999480695,
+      29.57300000707619,
+      25.645399990025908,
+      16.615699976682663,
+      26.608700020005926,
+      26.727399992523715,
+      19.78380000218749,
+      18.014000001130626,
+      111.67670000577345,
+      61.336100014159456,
+      59.42889998550527,
+      63.60550000681542,
+      76.43700001062825,
+      59.72820002352819
+    ],
+    "confidence_scores": [
+      0.8017578125,
+      0.55078125,
+      0.267333984375,
+      0.51953125,
+      0.30029296875,
+      0.2861328125,
+      0.2509765625,
+      0.4111328125,
+      0.38671875,
+      0.32861328125,
+      0.9365234375,
+      0.80419921875,
+      0.31396484375,
+      0.26806640625,
+      0.5009765625,
+      0.416748046875,
+      0.7080078125,
+      0.6611328125,
+      0.73876953125,
+      0.89892578125,
+      0.533203125
+    ],
+    "detections_per_image": [
+      1,
+      2,
+      1,
+      0,
+      3,
+      0,
+      3,
+      4,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "avg_latency_ms": 63.47579091115304,
+    "avg_fps": 37.227763712825485,
+    "avg_confidence": 0.5182756696428571,
+    "min_confidence": 0.2509765625,
+    "max_confidence": 0.9365234375
+  },
+  "ingestion_layer": {
+    "events_stored": 22,
+    "storage_latency_ms": [
+      3.168099996400997,
+      1.225999993039295,
+      2.3539999965578318,
+      0.6679999933112413,
+      1.2213000154588372,
+      2.353799995034933,
+      2.946400025393814,
+      0.674000009894371,
+      2.300799998920411,
+      1.121699984651059,
+      2.6981999981217086,
+      0.6659000064246356,
+      2.894699980970472,
+      2.4502000014763325,
+      2.4246999819297343,
+      0.6538000016007572,
+      2.4874999944586307,
+      2.358099998673424,
+      2.192899992223829,
+      0.6199000054039061,
+      2.5025999930221587,
+      2.309400006197393
+    ],
+    "avg_event_size_bytes": [
+      750,
+      973,
+      750,
+      532,
+      1267,
+      558,
+      1201,
+      1416,
+      540,
+      765,
+      763,
+      538,
+      761,
+      767,
+      772,
+      560,
+      604,
+      540,
+      572,
+      540,
+      1040,
+      542
+    ],
+    "avg_latency_ms": 1.9223636349620805,
+    "avg_size_bytes": 761.4090909090909
+  },
+  "cognition_layer": {
+    "summaries_generated": 0,
+    "latency_ms": [],
+    "token_counts": [],
+    "failures": 22
+  },
+  "ai_detection": {
+    "total_analyzed": 22,
+    "ai_generated_count": 0,
+    "original_count": 22,
+    "avg_ai_confidence": [
+      0.42500000000000004,
+      0.47,
+      0.41000000000000003,
+      0.5,
+      0.47,
+      0.45499999999999996,
+      0.41000000000000003,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.47,
+      0.47,
+      0.45499999999999996,
+      0.42500000000000004,
+      0.47,
+      0.47,
+      0.545,
+      0.45499999999999996,
+      0.47,
+      0.49999999999999994,
+      0.545,
+      0.47
+    ],
+    "latency_ms": [
+      411.4500999858137,
+      666.5819000045303,
+      197.33409999753349,
+      344.60019998368807,
+      56.71119998442009,
+      677.0994999969844,
+      226.822099997662,
+      216.8404999829363,
+      241.52260000118986,
+      278.1042999995407,
+      556.8637000105809,
+      25.757199997315183,
+      298.98180000600405,
+      319.087900017621,
+      212.18999999109656,
+      525.1164000073913,
+      6825.670900027035,
+      257.5465999834705,
+      248.57479997444898,
+      239.19029999524355,
+      1612.3179999995045,
+      130.1789999997709
+    ],
+    "avg_latency_ms": 662.2065045428991,
+    "avg_confidence": 0.465909090909091,
+    "ai_generated_pct": 0.0
+  },
+  "end_to_end": {
+    "total_latency_ms": [
+      1098.0361999827437,
+      787.340300012147,
+      230.57009998592548,
+      404.32780000264756,
+      82.41430000634864,
+      788.9728999871295,
+      281.4236999838613,
+      281.9848000071943,
+      285.33149999566376,
+      336.4102999912575,
+      611.5815000084694,
+      44.829799997387454,
+      364.7738000145182,
+      388.3717999851797,
+      254.05570000293665,
+      561.8071999924723,
+      7271.190700004809,
+      356.51620000135154,
+      347.63459998066537,
+      316.34289998328313,
+      1771.1060000001453,
+      210.5015000270214
+    ],
+    "success_rate": 1.0,
+    "workflow_trigger_accuracy": 0.5454545454545454,
+    "avg_latency_ms": 776.1601636342344,
+    "min_latency_ms": 44.829799997387454,
+    "max_latency_ms": 7271.190700004809,
+    "manual_effort_reduction_pct": 97.41279945455256
+  },
+  "per_image_results": [
+    {
+      "image": "5v5.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 411.4500999858137,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 645.0136000057682,
+        "fps": 1.5503549072315022,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.8017578125,
+            "bbox": "x1=145.0 y1=26.0 x2=639.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_5v5_1769067583",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_5v5_1769067583.json",
+        "latency_ms": 3.168099996400997,
+        "size_bytes": 750
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0041000021155923605,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 1098.0361999827437
+      }
+    },
+    {
+      "image": "abstract.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 666.5819000045303,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 2,
+        "latency_ms": 20.321000018157065,
+        "fps": 49.210176620564326,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.55078125,
+            "bbox": "x1=141.0 y1=0.0 x2=625.0 y2=638.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.267333984375,
+            "bbox": "x1=292.0 y1=432.0 x2=375.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_abstract_1769067583",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_abstract_1769067583.json",
+        "latency_ms": 1.225999993039295,
+        "size_bytes": 973
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0022999884095042944,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 787.340300012147
+      }
+    },
+    {
+      "image": "ACE 2.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 197.33409999753349,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 17.132099979789928,
+        "fps": 58.36996055239353,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.51953125,
+            "bbox": "x1=9.0 y1=20.0 x2=493.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_ACE 2_1769067584",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ACE 2_1769067584.json",
+        "latency_ms": 2.3539999965578318,
+        "size_bytes": 750
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.001900014467537403,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 230.57009998592548
+      }
+    },
+    {
+      "image": "ACE.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.5,
+        "original_confidence": 0.5,
+        "latency_ms": 344.60019998368807,
+        "explanation": "Atypical noise characteristics (too clean); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 19.40770001965575,
+        "fps": 51.525940682678474,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_ACE_1769067584",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ACE_1769067584.json",
+        "latency_ms": 0.6679999933112413,
+        "size_bytes": 532
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0017999846022576094,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 404.32780000264756
+      }
+    },
+    {
+      "image": "Blue Modern Corporate Staff Profile LinkedIn Banner.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 56.71119998442009,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 3,
+        "latency_ms": 16.937200009124354,
+        "fps": 59.041636130014595,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.30029296875,
+            "bbox": "x1=3.0 y1=1.0 x2=627.0 y2=639.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.2861328125,
+            "bbox": "x1=348.0 y1=0.0 x2=379.0 y2=367.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.2509765625,
+            "bbox": "x1=390.0 y1=0.0 x2=485.0 y2=612.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_Blue Modern Corporate Staff Profile LinkedIn Banner_1769067584",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_Blue Modern Corporate Staff Profile LinkedIn Banner_1769067584.json",
+        "latency_ms": 1.2213000154588372,
+        "size_bytes": 1267
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0026999914553016424,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 82.41430000634864
+      }
+    },
+    {
+      "image": "ecosystem-gemini.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 677.0994999969844,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 19.285599992144853,
+        "fps": 51.85215914502563,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_ecosystem-gemini_1769067585",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ecosystem-gemini_1769067585.json",
+        "latency_ms": 2.353799995034933,
+        "size_bytes": 558
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0017999846022576094,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 788.9728999871295
+      }
+    },
+    {
+      "image": "ecosystem-gpt.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 226.822099997662,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 3,
+        "latency_ms": 24.421699985396117,
+        "fps": 40.94719043301605,
+        "detections": [
+          {
+            "class": "scissors",
+            "confidence": 0.4111328125,
+            "bbox": "x1=11.0 y1=456.0 x2=186.0 y2=563.0"
+          },
+          {
+            "class": "tv",
+            "confidence": 0.38671875,
+            "bbox": "x1=194.0 y1=208.0 x2=442.0 y2=387.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.32861328125,
+            "bbox": "x1=536.0 y1=475.0 x2=638.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_ecosystem-gpt_1769067585",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ecosystem-gpt_1769067585.json",
+        "latency_ms": 2.946400025393814,
+        "size_bytes": 1201
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0030999945010989904,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 281.4236999838613
+      }
+    },
+    {
+      "image": "ecosystem.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 216.8404999829363,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 4,
+        "latency_ms": 21.820699999807402,
+        "fps": 45.828044013657966,
+        "detections": [
+          {
+            "class": "laptop",
+            "confidence": 0.9365234375,
+            "bbox": "x1=499.0 y1=442.0 x2=638.0 y2=583.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.80419921875,
+            "bbox": "x1=88.0 y1=135.0 x2=384.0 y2=549.0"
+          },
+          {
+            "class": "snowboard",
+            "confidence": 0.31396484375,
+            "bbox": "x1=457.0 y1=157.0 x2=588.0 y2=324.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.26806640625,
+            "bbox": "x1=29.0 y1=475.0 x2=69.0 y2=533.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_ecosystem_1769067585",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_ecosystem_1769067585.json",
+        "latency_ms": 0.674000009894371,
+        "size_bytes": 1416
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.001700012944638729,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 281.9848000071943
+      }
+    },
+    {
+      "image": "HOUSTON.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 241.52260000118986,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 16.947399999480695,
+        "fps": 59.00610123267535,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_HOUSTON_1769067586",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_HOUSTON_1769067586.json",
+        "latency_ms": 2.300799998920411,
+        "size_bytes": 540
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0019999861251562834,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 285.33149999566376
+      }
+    },
+    {
+      "image": "I MISS HER.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 278.1042999995407,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 29.57300000707619,
+        "fps": 33.81462820007173,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.5009765625,
+            "bbox": "x1=280.0 y1=507.0 x2=339.0 y2=563.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_I MISS HER_1769067586",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_I MISS HER_1769067586.json",
+        "latency_ms": 1.121699984651059,
+        "size_bytes": 765
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.002200016751885414,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 336.4102999912575
+      }
+    },
+    {
+      "image": "imgshape.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 556.8637000105809,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 25.645399990025908,
+        "fps": 38.99334775004185,
+        "detections": [
+          {
+            "class": "clock",
+            "confidence": 0.416748046875,
+            "bbox": "x1=428.0 y1=192.0 x2=564.0 y2=438.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_imgshape_1769067587",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_imgshape_1769067587.json",
+        "latency_ms": 2.6981999981217086,
+        "size_bytes": 763
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.002800021320581436,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 611.5815000084694
+      }
+    },
+    {
+      "image": "INFERNO.jpg",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 25.757199997315183,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 16.615699976682663,
+        "fps": 60.18404288734941,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_INFERNO_1769067587",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_INFERNO_1769067587.json",
+        "latency_ms": 0.6659000064246356,
+        "size_bytes": 538
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0023999891709536314,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 44.829799997387454
+      }
+    },
+    {
+      "image": "KOSMIK 2.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 298.98180000600405,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 26.608700020005926,
+        "fps": 37.58169317734964,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.7080078125,
+            "bbox": "x1=205.0 y1=372.0 x2=271.0 y2=635.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_KOSMIK 2_1769067587",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_KOSMIK 2_1769067587.json",
+        "latency_ms": 2.894699980970472,
+        "size_bytes": 761
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0034999975468963385,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 364.7738000145182
+      }
+    },
+    {
+      "image": "KOSMIKBOIII.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 319.087900017621,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 26.727399992523715,
+        "fps": 37.414787831204066,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.6611328125,
+            "bbox": "x1=154.0 y1=185.0 x2=501.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_KOSMIKBOIII_1769067588",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_KOSMIKBOIII_1769067588.json",
+        "latency_ms": 2.4502000014763325,
+        "size_bytes": 767
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.002400018274784088,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 388.3717999851797
+      }
+    },
+    {
+      "image": "NEO STREAM 01.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 212.18999999109656,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 19.78380000218749,
+        "fps": 50.546406650361924,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.73876953125,
+            "bbox": "x1=155.0 y1=188.0 x2=502.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_NEO STREAM 01_1769067588",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_NEO STREAM 01_1769067588.json",
+        "latency_ms": 2.4246999819297343,
+        "size_bytes": 772
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0021999876480549574,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 254.05570000293665
+      }
+    },
+    {
+      "image": "PATEL_HILL_137881.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 525.1164000073913,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 18.014000001130626,
+        "fps": 55.51237925709094,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_PATEL_HILL_137881_1769067588",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_PATEL_HILL_137881_1769067588.json",
+        "latency_ms": 0.6538000016007572,
+        "size_bytes": 560
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0025999906938523054,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 561.8071999924723
+      }
+    },
+    {
+      "image": "pexels-david-kanigan-239927285-15347286.jpg",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 6825.670900027035,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 111.67670000577345,
+        "fps": 8.954419318875845,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_pexels-david-kanigan-239927285-15347286_1769067596",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_pexels-david-kanigan-239927285-15347286_1769067596.json",
+        "latency_ms": 2.4874999944586307,
+        "size_bytes": 604
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0031999952625483274,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 7271.190700004809
+      }
+    },
+    {
+      "image": "STIFLER.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 257.5465999834705,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 61.336100014159456,
+        "fps": 16.30361238763387,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_STIFLER_1769067596",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_STIFLER_1769067596.json",
+        "latency_ms": 2.358099998673424,
+        "size_bytes": 540
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0018999853637069464,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 356.51620000135154
+      }
+    },
+    {
+      "image": "The Myth vs The Reality.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 248.57479997444898,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.42889998550527,
+        "fps": 16.826830048072576,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_The Myth vs The Reality_1769067596",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_The Myth vs The Reality_1769067596.json",
+        "latency_ms": 2.192899992223829,
+        "size_bytes": 572
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.002100015990436077,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 347.63459998066537
+      }
+    },
+    {
+      "image": "UNIVERY.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.49999999999999994,
+        "original_confidence": 0.5,
+        "latency_ms": 239.19029999524355,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 63.60550000681542,
+        "fps": 15.721910839358996,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_UNIVERY_1769067597",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_UNIVERY_1769067597.json",
+        "latency_ms": 0.6199000054039061,
+        "size_bytes": 540
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.001900014467537403,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 316.34289998328313
+      }
+    },
+    {
+      "image": "WhatsApp Image 2025-09-24 at 14.03.08.jpeg",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 1612.3179999995045,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 2,
+        "latency_ms": 76.43700001062825,
+        "fps": 13.082669386042808,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.89892578125,
+            "bbox": "x1=33.0 y1=252.0 x2=515.0 y2=639.0"
+          },
+          {
+            "class": "cell phone",
+            "confidence": 0.533203125,
+            "bbox": "x1=243.0 y1=329.0 x2=333.0 y2=465.0"
+          }
+        ]
+      },
+      "ingestion": {
+        "event_id": "eval_WhatsApp Image 2025-09-24 at 14.03.08_1769067598",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_WhatsApp Image 2025-09-24 at 14.03.08_1769067598.json",
+        "latency_ms": 2.5025999930221587,
+        "size_bytes": 1040
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.002100015990436077,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 1771.1060000001453
+      }
+    },
+    {
+      "image": "WORKFLOW.png",
+      "success": true,
+      "error": null,
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 130.1789999997709,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.72820002352819,
+        "fps": 16.742510231449785,
+        "detections": []
+      },
+      "ingestion": {
+        "event_id": "eval_WORKFLOW_1769067599",
+        "event_path": "D:\\vision-to-action\\data\\ingestion\\events\\2026\\01\\22\\eval_WORKFLOW_1769067599.json",
+        "latency_ms": 2.309400006197393,
+        "size_bytes": 542
+      },
+      "cognition": {
+        "error": "'GeminiReasoner' object has no attribute 'summarize_scene'",
+        "latency_ms": 0.0028999929782003164,
+        "success": false
+      },
+      "timings": {
+        "end_to_end_ms": 210.5015000270214
+      }
+    }
+  ]
+}

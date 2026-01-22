@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-01-22T07:48:20.908121+00:00",
+  "hardware": "NVIDIA RTX 3050 6GB",
+  "total_images": 22,
+  "perception": {
+    "avg_latency_ms": 103.53882727213204,
+    "avg_fps": 13.946343063548056,
+    "total_detections": 21,
+    "avg_confidence": 0.5182756696428571
+  },
+  "ingestion": {
+    "events_stored": 22,
+    "avg_latency_ms": 2.103390906334177
+  },
+  "cognition": {
+    "summaries_generated": 22,
+    "avg_latency_ms": 1955.9734727279813,
+    "success_rate": 1.0
+  },
+  "ai_detection": {
+    "total_analyzed": 22,
+    "ai_generated_count": 15,
+    "original_count": 7,
+    "ai_generated_pct": 68.18181818181817,
+    "avg_latency_ms": 5870.705522730449
+  },
+  "end_to_end": {
+    "avg_latency_ms": 7988.123759091567,
+    "success_rate": 1.0,
+    "workflow_trigger_accuracy": 0.5454545454545454,
+    "manual_effort_reduction_pct": 73.37292080302811
+  }
+}

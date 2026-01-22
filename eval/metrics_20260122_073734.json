@@ -1,0 +1,488 @@
+{
+  "test_info": {
+    "timestamp": "2026-01-22T07:37:17.711367+00:00",
+    "test_dir": "D:\\vision-to-action\\data\\test",
+    "total_images": 22,
+    "hardware": "NVIDIA RTX 3050 6GB"
+  },
+  "perception_layer": {
+    "total_detections": 0,
+    "images_with_detections": 0,
+    "images_without_detections": 0,
+    "fps": [],
+    "latency_ms": [],
+    "confidence_scores": [],
+    "detections_per_image": []
+  },
+  "ingestion_layer": {
+    "events_stored": 0,
+    "storage_latency_ms": [],
+    "avg_event_size_bytes": []
+  },
+  "cognition_layer": {
+    "summaries_generated": 0,
+    "latency_ms": [],
+    "token_counts": [],
+    "failures": 0
+  },
+  "ai_detection": {
+    "total_analyzed": 22,
+    "ai_generated_count": 0,
+    "original_count": 22,
+    "avg_ai_confidence": [
+      0.42500000000000004,
+      0.47,
+      0.41000000000000003,
+      0.5,
+      0.47,
+      0.45499999999999996,
+      0.41000000000000003,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.47,
+      0.47,
+      0.45499999999999996,
+      0.42500000000000004,
+      0.47,
+      0.47,
+      0.545,
+      0.45499999999999996,
+      0.47,
+      0.49999999999999994,
+      0.545,
+      0.47
+    ],
+    "latency_ms": [
+      438.4087999933399,
+      602.7842999901623,
+      268.90260001528077,
+      339.049200003501,
+      92.06080000149086,
+      753.8168999890331,
+      316.0020000068471,
+      282.3544999992009,
+      305.80030000419356,
+      281.7477000062354,
+      529.8263000149745,
+      39.5591999986209,
+      303.2530000200495,
+      321.1429999792017,
+      221.34779999032617,
+      487.3598999984097,
+      7467.696399980923,
+      224.3525999947451,
+      231.60440000356175,
+      269.47430000291206,
+      1698.8125999923795,
+      121.38160000904463
+    ],
+    "avg_latency_ms": 708.9426454542925,
+    "avg_confidence": 0.465909090909091,
+    "ai_generated_pct": 0.0
+  },
+  "end_to_end": {
+    "total_latency_ms": [],
+    "success_rate": 0.0,
+    "workflow_trigger_accuracy": 0.0,
+    "manual_effort_reduction_pct": 100.0
+  },
+  "per_image_results": [
+    {
+      "image": "5v5.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 438.4087999933399,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "abstract.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 602.7842999901623,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "ACE 2.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 268.90260001528077,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "ACE.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.5,
+        "original_confidence": 0.5,
+        "latency_ms": 339.049200003501,
+        "explanation": "Atypical noise characteristics (too clean); Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "Blue Modern Corporate Staff Profile LinkedIn Banner.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 92.06080000149086,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "ecosystem-gemini.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 753.8168999890331,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "ecosystem-gpt.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 316.0020000068471,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "ecosystem.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 282.3544999992009,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "HOUSTON.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 305.80030000419356,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "I MISS HER.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 281.7477000062354,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "imgshape.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 529.8263000149745,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "INFERNO.jpg",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 39.5591999986209,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "KOSMIK 2.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 303.2530000200495,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "KOSMIKBOIII.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 321.1429999792017,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "NEO STREAM 01.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 221.34779999032617,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "PATEL_HILL_137881.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 487.3598999984097,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "pexels-david-kanigan-239927285-15347286.jpg",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 7467.696399980923,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "STIFLER.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 224.3525999947451,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "The Myth vs The Reality.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 231.60440000356175,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "UNIVERY.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.49999999999999994,
+        "original_confidence": 0.5,
+        "latency_ms": 269.47430000291206,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "WhatsApp Image 2025-09-24 at 14.03.08.jpeg",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 1698.8125999923795,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    },
+    {
+      "image": "WORKFLOW.png",
+      "success": false,
+      "error": "YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 121.38160000904463,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 134, in evaluate_image\n    detections = self.detector.detect(img, confidence_threshold=0.25)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\nTypeError: YOLOv8Detector.detect() got an unexpected keyword argument 'confidence_threshold'\n"
+    }
+  ]
+}

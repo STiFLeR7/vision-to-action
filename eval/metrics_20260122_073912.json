@@ -1,0 +1,811 @@
+{
+  "test_info": {
+    "timestamp": "2026-01-22T07:38:55.675299+00:00",
+    "test_dir": "D:\\vision-to-action\\data\\test",
+    "total_images": 22,
+    "hardware": "NVIDIA RTX 3050 6GB"
+  },
+  "perception_layer": {
+    "total_detections": 21,
+    "images_with_detections": 12,
+    "images_without_detections": 10,
+    "fps": [
+      1.411653367934415,
+      41.17615571330042,
+      45.14285452495705,
+      36.08518993915693,
+      58.07403276264745,
+      44.8587398076146,
+      48.06837245878462,
+      49.21308278408814,
+      42.4920752177144,
+      58.13108562512048,
+      48.986709914181915,
+      46.325678807817106,
+      55.634061331941965,
+      39.618395622542586,
+      55.762807243783385,
+      45.63313693585636,
+      9.216105698752534,
+      16.16237367296588,
+      17.249290194335998,
+      16.80771137643215,
+      12.417979247942187,
+      16.916638190683276
+    ],
+    "latency_ms": [
+      708.3892000082415,
+      24.285899999085814,
+      22.151900018798187,
+      27.712199982488528,
+      17.21940000425093,
+      22.29220001026988,
+      20.803699997486547,
+      20.319800009019673,
+      23.53380000567995,
+      17.202499991981313,
+      20.41369999642484,
+      21.586299990303814,
+      17.974600021261722,
+      25.24079999420792,
+      17.933100025402382,
+      21.913900010986254,
+      108.50569998729043,
+      61.87209999188781,
+      57.97339999116957,
+      59.4965000054799,
+      80.52839999436401,
+      59.11339999875054
+    ],
+    "confidence_scores": [
+      0.8017578125,
+      0.55078125,
+      0.267333984375,
+      0.51953125,
+      0.30029296875,
+      0.2861328125,
+      0.2509765625,
+      0.4111328125,
+      0.38671875,
+      0.32861328125,
+      0.9365234375,
+      0.80419921875,
+      0.31396484375,
+      0.26806640625,
+      0.5009765625,
+      0.416748046875,
+      0.7080078125,
+      0.6611328125,
+      0.73876953125,
+      0.89892578125,
+      0.533203125
+    ],
+    "detections_per_image": [
+      1,
+      2,
+      1,
+      0,
+      3,
+      0,
+      3,
+      4,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "avg_latency_ms": 66.20284091067415,
+    "avg_fps": 36.60836956538881,
+    "avg_confidence": 0.5182756696428571,
+    "min_confidence": 0.2509765625,
+    "max_confidence": 0.9365234375
+  },
+  "ingestion_layer": {
+    "events_stored": 0,
+    "storage_latency_ms": [],
+    "avg_event_size_bytes": []
+  },
+  "cognition_layer": {
+    "summaries_generated": 0,
+    "latency_ms": [],
+    "token_counts": [],
+    "failures": 0
+  },
+  "ai_detection": {
+    "total_analyzed": 22,
+    "ai_generated_count": 0,
+    "original_count": 22,
+    "avg_ai_confidence": [
+      0.42500000000000004,
+      0.47,
+      0.41000000000000003,
+      0.5,
+      0.47,
+      0.45499999999999996,
+      0.41000000000000003,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.47,
+      0.47,
+      0.45499999999999996,
+      0.42500000000000004,
+      0.47,
+      0.47,
+      0.545,
+      0.45499999999999996,
+      0.47,
+      0.49999999999999994,
+      0.545,
+      0.47
+    ],
+    "latency_ms": [
+      359.50819999561645,
+      561.0366999753751,
+      248.54380000033416,
+      294.7334000200499,
+      70.34169998951256,
+      563.5124999971595,
+      238.49269998027012,
+      267.7202000049874,
+      230.92240002006292,
+      287.0546000194736,
+      516.7637999984436,
+      25.569100020220503,
+      277.2287999978289,
+      298.34419998223893,
+      217.39949999027885,
+      436.3530999980867,
+      6755.261599988444,
+      277.86999999079853,
+      175.8001999987755,
+      234.5322000037413,
+      1551.5104999940377,
+      121.22710002586246
+    ],
+    "avg_latency_ms": 636.805740908709,
+    "avg_confidence": 0.465909090909091,
+    "ai_generated_pct": 0.0
+  },
+  "end_to_end": {
+    "total_latency_ms": [],
+    "success_rate": 0.0,
+    "workflow_trigger_accuracy": 0.5454545454545454,
+    "manual_effort_reduction_pct": 100.0
+  },
+  "per_image_results": [
+    {
+      "image": "5v5.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_5v5_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_5v5_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 359.50819999561645,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 708.3892000082415,
+        "fps": 1.411653367934415,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.8017578125,
+            "bbox": "x1=145.0 y1=26.0 x2=639.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_5v5_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_5v5_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "abstract.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_abstra...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_abstra...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 561.0366999753751,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 2,
+        "latency_ms": 24.285899999085814,
+        "fps": 41.17615571330042,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.55078125,
+            "bbox": "x1=141.0 y1=0.0 x2=625.0 y2=638.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.267333984375,
+            "bbox": "x1=292.0 y1=432.0 x2=375.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_abstra...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_abstra...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "ACE 2.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ACE 2_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ACE 2_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 248.54380000033416,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 22.151900018798187,
+        "fps": 45.14285452495705,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.51953125,
+            "bbox": "x1=9.0 y1=20.0 x2=493.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ACE 2_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ACE 2_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "ACE.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ACE_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ACE_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.5,
+        "original_confidence": 0.5,
+        "latency_ms": 294.7334000200499,
+        "explanation": "Atypical noise characteristics (too clean); Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 27.712199982488528,
+        "fps": 36.08518993915693,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ACE_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ACE_17...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "Blue Modern Corporate Staff Profile LinkedIn Banner.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_Blue M...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_Blue M...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 70.34169998951256,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 3,
+        "latency_ms": 17.21940000425093,
+        "fps": 58.07403276264745,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.30029296875,
+            "bbox": "x1=3.0 y1=1.0 x2=627.0 y2=639.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.2861328125,
+            "bbox": "x1=348.0 y1=0.0 x2=379.0 y2=367.0"
+          },
+          {
+            "class": "tie",
+            "confidence": 0.2509765625,
+            "bbox": "x1=390.0 y1=0.0 x2=485.0 y2=612.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_Blue M...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_Blue M...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "ecosystem-gemini.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 563.5124999971595,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 22.29220001026988,
+        "fps": 44.8587398076146,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "ecosystem-gpt.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 238.49269998027012,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 3,
+        "latency_ms": 20.803699997486547,
+        "fps": 48.06837245878462,
+        "detections": [
+          {
+            "class": "scissors",
+            "confidence": 0.4111328125,
+            "bbox": "x1=11.0 y1=456.0 x2=186.0 y2=563.0"
+          },
+          {
+            "class": "tv",
+            "confidence": 0.38671875,
+            "bbox": "x1=194.0 y1=208.0 x2=442.0 y2=387.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.32861328125,
+            "bbox": "x1=536.0 y1=475.0 x2=638.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "ecosystem.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 267.7202000049874,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 4,
+        "latency_ms": 20.319800009019673,
+        "fps": 49.21308278408814,
+        "detections": [
+          {
+            "class": "laptop",
+            "confidence": 0.9365234375,
+            "bbox": "x1=499.0 y1=442.0 x2=638.0 y2=583.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.80419921875,
+            "bbox": "x1=88.0 y1=135.0 x2=384.0 y2=549.0"
+          },
+          {
+            "class": "snowboard",
+            "confidence": 0.31396484375,
+            "bbox": "x1=457.0 y1=157.0 x2=588.0 y2=324.0"
+          },
+          {
+            "class": "person",
+            "confidence": 0.26806640625,
+            "bbox": "x1=29.0 y1=475.0 x2=69.0 y2=533.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_ecosys...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "HOUSTON.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_HOUSTO...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_HOUSTO...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 230.92240002006292,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 23.53380000567995,
+        "fps": 42.4920752177144,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_HOUSTO...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_HOUSTO...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "I MISS HER.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_I MISS...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_I MISS...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 287.0546000194736,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 17.202499991981313,
+        "fps": 58.13108562512048,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.5009765625,
+            "bbox": "x1=280.0 y1=507.0 x2=339.0 y2=563.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_I MISS...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_I MISS...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "imgshape.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_imgsha...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_imgsha...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 516.7637999984436,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 20.41369999642484,
+        "fps": 48.986709914181915,
+        "detections": [
+          {
+            "class": "clock",
+            "confidence": 0.416748046875,
+            "bbox": "x1=428.0 y1=192.0 x2=564.0 y2=438.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_imgsha...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_imgsha...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "INFERNO.jpg",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_INFERN...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_INFERN...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 25.569100020220503,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 21.586299990303814,
+        "fps": 46.325678807817106,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_INFERN...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_INFERN...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "KOSMIK 2.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 277.2287999978289,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 17.974600021261722,
+        "fps": 55.634061331941965,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.7080078125,
+            "bbox": "x1=205.0 y1=372.0 x2=271.0 y2=635.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "KOSMIKBOIII.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 298.34419998223893,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 25.24079999420792,
+        "fps": 39.618395622542586,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.6611328125,
+            "bbox": "x1=154.0 y1=185.0 x2=501.0 y2=639.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_KOSMIK...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "NEO STREAM 01.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_NEO ST...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_NEO ST...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 217.39949999027885,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 1,
+        "latency_ms": 17.933100025402382,
+        "fps": 55.762807243783385,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.73876953125,
+            "bbox": "x1=155.0 y1=188.0 x2=502.0 y2=640.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_NEO ST...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_NEO ST...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "PATEL_HILL_137881.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_PATEL_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_PATEL_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 436.3530999980867,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 21.913900010986254,
+        "fps": 45.63313693585636,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_PATEL_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_PATEL_...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "pexels-david-kanigan-239927285-15347286.jpg",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_pexels...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_pexels...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 6755.261599988444,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 108.50569998729043,
+        "fps": 9.216105698752534,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_pexels...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_pexels...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "STIFLER.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_STIFLE...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_STIFLE...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 277.86999999079853,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 61.87209999188781,
+        "fps": 16.16237367296588,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_STIFLE...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_STIFLE...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "The Myth vs The Reality.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_The My...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_The My...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 175.8001999987755,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 57.97339999116957,
+        "fps": 17.249290194335998,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_The My...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_The My...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "UNIVERY.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_UNIVER...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_UNIVER...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.49999999999999994,
+        "original_confidence": 0.5,
+        "latency_ms": 234.5322000037413,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.4965000054799,
+        "fps": 16.80771137643215,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    event = PerceptionEvent(\n            ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_UNIVER...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_UNIVER...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "WhatsApp Image 2025-09-24 at 14.03.08.jpeg",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_WhatsA...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_WhatsA...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 1551.5104999940377,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 2,
+        "latency_ms": 80.52839999436401,
+        "fps": 12.417979247942187,
+        "detections": [
+          {
+            "class": "person",
+            "confidence": 0.89892578125,
+            "bbox": "x1=33.0 y1=252.0 x2=515.0 y2=639.0"
+          },
+          {
+            "class": "cell phone",
+            "confidence": 0.533203125,
+            "bbox": "x1=243.0 y1=329.0 x2=333.0 y2=465.0"
+          }
+        ]
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    from ingestion.schemas.perception_schema import ImageMetadata, TaskType\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_WhatsA...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_WhatsA...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    },
+    {
+      "image": "WORKFLOW.png",
+      "success": false,
+      "error": "2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_WORKFL...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_WORKFL...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 121.22710002586246,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {
+        "num_detections": 0,
+        "latency_ms": 59.11339999875054,
+        "fps": 16.916638190683276,
+        "detections": []
+      },
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 179, in evaluate_image\n    from ingestion.schemas.perception_schema import ImageMetadata, TaskType\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stifl\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\pydantic\\main.py\", line 250, in __init__\n    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\npydantic_core._pydantic_core.ValidationError: 2 validation errors for PerceptionEvent\ntask_type\n  Field required [type=missing, input_value={'event_id': 'eval_WORKFL...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nimage_metadata\n  Field required [type=missing, input_value={'event_id': 'eval_WORKFL...': {'evaluation': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\n"
+    }
+  ]
+}

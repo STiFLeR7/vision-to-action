@@ -1,0 +1,186 @@
+{
+  "name": "Vision-to-Action Anomaly Escalation",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "vision-to-action-anomaly",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "webhookId": "vision-to-action-anomaly"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.severity }}",
+              "operation": "equals",
+              "value2": "high"
+            },
+            {
+              "value1": "={{ $json.severity }}",
+              "operation": "equals",
+              "value2": "critical"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "severity-check",
+      "name": "Check Severity",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const anomaly = $input.first().json;\n\nconst emailBody = `\n⚠️ ANOMALY DETECTED ⚠️\n======================\n\nAnomaly ID: ${anomaly.anomaly_id}\nSeverity: ${anomaly.severity.toUpperCase()}\nTimestamp: ${anomaly.timestamp}\n\nDescription:\n${anomaly.description}\n\nEvent ID: ${anomaly.event_id}\n\nGemini Analysis:\n${anomaly.gemini_explanation || 'Not available'}\n\nRecommended Actions:\n${anomaly.recommended_actions || 'Manual review required'}\n\nThis requires immediate attention.\n`;\n\nreturn {\n  subject: `🚨 CRITICAL ANOMALY: ${anomaly.anomaly_type}`,\n  body: emailBody,\n  anomaly_id: anomaly.anomaly_id,\n  severity: anomaly.severity\n};"
+      },
+      "id": "format-alert",
+      "name": "Format Alert",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [650, 200]
+    },
+    {
+      "parameters": {
+        "fromEmail": "vision-to-action@example.com",
+        "toEmail": "critical-alerts@example.com",
+        "subject": "={{ $json.subject }}",
+        "emailType": "text",
+        "message": "={{ $json.body }}"
+      },
+      "id": "send-critical-email",
+      "name": "Send Critical Alert",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [850, 200]
+    },
+    {
+      "parameters": {
+        "url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "🚨 Critical anomaly detected: {{ $json.subject }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "slack-notification",
+      "name": "Slack Notification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [650, 400]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO anomaly_escalations (anomaly_id, severity, timestamp, escalated_at) VALUES ('{{ $json.anomaly_id }}', '{{ $json.severity }}', '{{ $json.timestamp }}', NOW())"
+      },
+      "id": "log-escalation",
+      "name": "Log Escalation",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2,
+      "position": [850, 400]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"status\": \"escalated\", \"anomaly_id\": $json.anomaly_id } }}"
+      },
+      "id": "webhook-response",
+      "name": "Webhook Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1050, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check Severity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Severity": {
+      "main": [
+        [
+          {
+            "node": "Format Alert",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Alert": {
+      "main": [
+        [
+          {
+            "node": "Send Critical Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Critical Alert": {
+      "main": [
+        [
+          {
+            "node": "Webhook Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Notification": {
+      "main": [
+        [
+          {
+            "node": "Log Escalation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Escalation": {
+      "main": [
+        [
+          {
+            "node": "Webhook Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "saveDataSuccessExecution": "all",
+    "saveDataErrorExecution": "all"
+  }
+}

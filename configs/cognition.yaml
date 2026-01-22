@@ -1,0 +1,36 @@
+# Cognition Layer Configuration (Gemini API)
+
+gemini:
+  model: "gemini-2.0-flash"  # or gemini-1.5-pro
+  temperature: 0.2
+  max_output_tokens: 2048
+  top_p: 0.95
+  top_k: 40
+  
+  # API settings
+  api_key_env_var: "GEMINI_API_KEY"
+  timeout_seconds: 30
+  retry_attempts: 3
+  
+  # Usage rules (from SoW)
+  never_receive_raw_images: true
+  operate_on_structured_outputs_only: true
+  cpu_only: true
+  stateless: true
+  
+# Prompt templates
+prompts:
+  summarize_detections:
+    system: "You are an AI assistant analyzing structured computer vision detection results. Provide clear, concise summaries of what was detected."
+    
+  explain_anomaly:
+    system: "You are an AI assistant analyzing anomalies in detection patterns. Explain potential causes and risks."
+    
+  generate_report:
+    system: "You are an AI assistant generating inspection reports from structured CV outputs. Be precise and actionable."
+    
+# Output formatting
+output:
+  format: "markdown"  # markdown | json | plain
+  include_metadata: true
+  include_confidence_scores: true

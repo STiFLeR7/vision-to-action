@@ -1,0 +1,70 @@
+# Vision-to-Action System Configuration
+
+system:
+  name: "vision-to-action"
+  version: "0.1.0"
+  environment: "local"  # local | production
+
+# Hardware constraints (6 GB VRAM)
+hardware:
+  target_device: "cuda:0"
+  vram_limit_mb: 6144
+  precision: "fp16"
+  batch_size: 4
+  gradient_accumulation_steps: 4
+  enable_memory_efficient_mode: true
+
+# imgshape v4 Atlas Integration
+imgshape:
+  base_url: "http://localhost:8000"  # or https://imgshape-947614788790.asia-south1.run.app
+  timeout_seconds: 30
+  retry_attempts: 3
+  required_version: "4.0.0"
+  
+  # Mandatory APIs
+  health_check_on_startup: true
+  validate_before_training: true
+  validate_before_inference: true
+  
+  # Atlas features
+  atlas:
+    enable_fingerprinting: true
+    enable_compatibility_check: true
+    enable_preprocessing_recommendation: true
+    deployment_target: "edge"
+    priority: "speed"  # speed | balanced
+    max_model_size_mb: 100
+
+# Data configuration
+data:
+  base_path: "D:/vision-to-action/data"
+  cache_path: "D:/vision-to-action/data/.cache"
+  supported_formats: ["jpg", "jpeg", "png", "bmp"]
+  
+# Model configuration
+models:
+  base_path: "D:/vision-to-action/models"
+  
+  detection:
+    architecture: "yolov8"
+    variant: "nano"  # nano | small
+    input_size: [640, 640]
+    confidence_threshold: 0.25
+    iou_threshold: 0.45
+    max_detections: 100
+    
+  segmentation:
+    enabled: false  # conditional only
+    architecture: "yolov8-seg"
+    variant: "nano"
+    trigger_on_confidence: 0.7
+    patch_based: true
+    patch_size: [256, 256]
+
+# Paths
+paths:
+  data: "D:/vision-to-action/data"
+  models: "D:/vision-to-action/models"
+  imgshape: "D:/vision-to-action/imgshape"
+  logs: "D:/vision-to-action/logs"
+  outputs: "D:/vision-to-action/outputs"

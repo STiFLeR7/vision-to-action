@@ -1,0 +1,488 @@
+{
+  "test_info": {
+    "timestamp": "2026-01-22T07:37:55.870769+00:00",
+    "test_dir": "D:\\vision-to-action\\data\\test",
+    "total_images": 22,
+    "hardware": "NVIDIA RTX 3050 6GB"
+  },
+  "perception_layer": {
+    "total_detections": 0,
+    "images_with_detections": 0,
+    "images_without_detections": 0,
+    "fps": [],
+    "latency_ms": [],
+    "confidence_scores": [],
+    "detections_per_image": []
+  },
+  "ingestion_layer": {
+    "events_stored": 0,
+    "storage_latency_ms": [],
+    "avg_event_size_bytes": []
+  },
+  "cognition_layer": {
+    "summaries_generated": 0,
+    "latency_ms": [],
+    "token_counts": [],
+    "failures": 0
+  },
+  "ai_detection": {
+    "total_analyzed": 22,
+    "ai_generated_count": 0,
+    "original_count": 22,
+    "avg_ai_confidence": [
+      0.42500000000000004,
+      0.47,
+      0.41000000000000003,
+      0.5,
+      0.47,
+      0.45499999999999996,
+      0.41000000000000003,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.45499999999999996,
+      0.47,
+      0.47,
+      0.45499999999999996,
+      0.42500000000000004,
+      0.47,
+      0.47,
+      0.545,
+      0.45499999999999996,
+      0.47,
+      0.49999999999999994,
+      0.545,
+      0.47
+    ],
+    "latency_ms": [
+      424.3944000045303,
+      680.1181000191718,
+      207.6746000093408,
+      259.65029999497347,
+      71.94039999740198,
+      608.9993999921717,
+      274.3082999950275,
+      224.31249998044223,
+      249.71069997991435,
+      260.9220999875106,
+      529.5762000023387,
+      36.128299980191514,
+      356.38910002307966,
+      328.6634999967646,
+      261.5821000072174,
+      419.9330999981612,
+      7407.4430000036955,
+      268.86300000478514,
+      235.8927000022959,
+      204.75000000442378,
+      1675.0771999941207,
+      145.16009998624213
+    ],
+    "avg_latency_ms": 687.7949590892637,
+    "avg_confidence": 0.465909090909091,
+    "ai_generated_pct": 0.0
+  },
+  "end_to_end": {
+    "total_latency_ms": [],
+    "success_rate": 0.0,
+    "workflow_trigger_accuracy": 0.0,
+    "manual_effort_reduction_pct": 100.0
+  },
+  "per_image_results": [
+    {
+      "image": "5v5.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 424.3944000045303,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "abstract.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 680.1181000191718,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "ACE 2.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 207.6746000093408,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "ACE.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.5,
+        "original_confidence": 0.5,
+        "latency_ms": 259.65029999497347,
+        "explanation": "Atypical noise characteristics (too clean); Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "Blue Modern Corporate Staff Profile LinkedIn Banner.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 71.94039999740198,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "ecosystem-gemini.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 608.9993999921717,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "ecosystem-gpt.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.41000000000000003,
+        "original_confidence": 0.59,
+        "latency_ms": 274.3082999950275,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "ecosystem.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 224.31249998044223,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "HOUSTON.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 249.71069997991435,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "I MISS HER.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 260.9220999875106,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "imgshape.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 529.5762000023387,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "INFERNO.jpg",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 36.128299980191514,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "KOSMIK 2.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 356.38910002307966,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "KOSMIKBOIII.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.42500000000000004,
+        "original_confidence": 0.575,
+        "latency_ms": 328.6634999967646,
+        "explanation": "Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "NEO STREAM 01.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 261.5821000072174,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "PATEL_HILL_137881.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 419.9330999981612,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "pexels-david-kanigan-239927285-15347286.jpg",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 7407.4430000036955,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "STIFLER.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.45499999999999996,
+        "original_confidence": 0.545,
+        "latency_ms": 268.86300000478514,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "The Myth vs The Reality.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 235.8927000022959,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "UNIVERY.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.49999999999999994,
+        "original_confidence": 0.5,
+        "latency_ms": 204.75000000442378,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "WhatsApp Image 2025-09-24 at 14.03.08.jpeg",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.545,
+        "original_confidence": 0.45499999999999996,
+        "latency_ms": 1675.0771999941207,
+        "explanation": "Atypical noise characteristics (too clean); Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    },
+    {
+      "image": "WORKFLOW.png",
+      "success": false,
+      "error": "object of type 'DetectionResult' has no len()",
+      "ai_detection": {
+        "verdict": "Original/Real",
+        "is_ai_generated": false,
+        "ai_confidence": 0.47,
+        "original_confidence": 0.53,
+        "latency_ms": 145.16009998624213,
+        "explanation": "Unnatural color distribution; Missing camera EXIF metadata"
+      },
+      "perception": {},
+      "ingestion": {},
+      "cognition": {},
+      "timings": {},
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\vision-to-action\\scripts\\evaluate_system.py\", line 138, in evaluate_image\n    \"num_detections\": len(detections),\n                      ^^^^^^^^^^^^^^^\nTypeError: object of type 'DetectionResult' has no len()\n"
+    }
+  ]
+}

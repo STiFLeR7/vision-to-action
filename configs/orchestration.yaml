@@ -1,0 +1,49 @@
+# n8n Orchestration Configuration
+
+n8n:
+  base_url: "http://localhost:5678"  # n8n instance
+  webhook_path: "/webhook/vision-to-action"
+  
+  # Trigger conditions
+  triggers:
+    confidence_threshold: 0.7
+    repeated_detection_count: 3
+    temporal_pattern_window_seconds: 60
+    anomaly_score_threshold: 0.8
+    
+  # Actions
+  actions:
+    email:
+      enabled: true
+      smtp_server: "smtp.example.com"
+      smtp_port: 587
+      from_address: "vision-to-action@example.com"
+      
+    webhook:
+      enabled: true
+      endpoints:
+        - name: "alert"
+          url: "https://example.com/api/alert"
+          method: "POST"
+          
+    logging:
+      enabled: true
+      level: "INFO"
+      destination: "file"  # file | database | remote
+      
+# Workflow templates
+workflows:
+  detection_alert:
+    description: "Alert on high-confidence detections"
+    trigger: "confidence_threshold"
+    actions: ["email", "webhook", "logging"]
+    
+  anomaly_escalation:
+    description: "Escalate repeated anomalies"
+    trigger: "repeated_detection_count"
+    actions: ["email", "logging"]
+    
+  quality_check:
+    description: "Trigger on imgshape quality issues"
+    trigger: "imgshape_compatibility_failure"
+    actions: ["email", "logging"]
