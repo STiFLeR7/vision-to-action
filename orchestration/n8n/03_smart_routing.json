@@ -1,0 +1,139 @@
+{
+  "name": "02 - Smart Routing (Discord for People, Email for Vehicles)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "vision/smart-route",
+        "options": {}
+      },
+      "id": "62d65b50-6937-4652-b688-76407cffcf4f",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "smart-routing-webhook-001"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "person-check",
+              "leftValue": "={{ $json.body.detection_class }}",
+              "rightValue": "person",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {
+          "ignoreCase": false
+        }
+      },
+      "id": "7e8d7a35-b20e-4789-979d-c0942ed5ed53",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        208,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "={{ '\ud83d\udc64 **Person Detected**\\n\\n\u2022 **Confidence**: ' + ($json.confidence * 100).toFixed(1) + '%\\n\u2022 **Location**: ' + $json.location + '\\n\u2022 **Time**: ' + $json.timestamp + '\\n\\n> Check security feeds in ' + $json.location }}",
+        "webhookUri": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "options": {}
+      },
+      "id": "52143ad8-9e47-4795-a1ce-f8a0653fce22",
+      "name": "Send to Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        416,
+        0
+      ],
+      "webhookId": "discord-person-001"
+    },
+    {
+      "parameters": {
+        "sendTo": "admin@example.com",
+        "subject": "={{ '\ud83d\udce6 Object Detected: ' + $json.body.detection_class }}",
+        "emailType": "html",
+        "message": "={{ '<h2>\ud83d\udce6 OBJECT ALERT</h2><p><strong>' + $json.body.detection_class + ' Detected</strong></p><table style=\"border-collapse: collapse; width: 100%;\"><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Class</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + $json.body.detection_class + '</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Confidence</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + ($json.body.confidence * 100).toFixed(1) + '%</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Location</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + $json.body.location + '</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Time</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + $json.body.timestamp + '</td></tr></table><p><strong>Action:</strong> Review and take appropriate action.</p>' }}"
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        416,
+        160
+      ],
+      "id": "6e267305-3c7d-493a-95f3-9c976812de57",
+      "name": "Send email",
+      "webhookId": "email-vehicle-001",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "YOUR_GMAIL_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send to Discord",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "646735e0-436b-4b5a-964a-feab8b82bf2c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3ed3895028c106ab256aa7d737c7791bccc4edb7c5b9e07115a302db9cdc700d"
+  },
+  "id": "44cP3btxOK-pPjOPIxTA9",
+  "tags": []
+}

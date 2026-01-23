@@ -1,0 +1,122 @@
+{
+  "name": "04 - Temporal Pattern Analysis (Every 15 Minutes)",
+  "nodes": [
+    {
+      "parameters": {
+        "unit": "minutes",
+        "value": 15
+      },
+      "id": "schedule_15min",
+      "name": "Schedule - Every 15 Minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Simulate pattern analysis\n// In production, this would query your database\n\nconst eventCount = Math.floor(Math.random() * 100);\nconst personCount = Math.floor(eventCount * 0.6);\nconst vehicleCount = eventCount - personCount;\n\n// Detect anomalies\nconst anomalies = [];\n\nif (personCount > 50) {\n  anomalies.push({\n    type: \"CROWD_SPIKE\",\n    value: personCount,\n    severity: \"HIGH\"\n  });\n}\n\nif (vehicleCount > 30) {\n  anomalies.push({\n    type: \"PARKING_OVERLOAD\",\n    value: vehicleCount,\n    severity: \"MEDIUM\"\n  });\n}\n\nreturn {\n  timestamp: new Date().toISOString(),\n  totalEvents: eventCount,\n  personCount: personCount,\n  vehicleCount: vehicleCount,\n  anomalies: anomalies,\n  hasAnomalies: anomalies.length > 0\n};"
+      },
+      "id": "function_analyze",
+      "name": "Function - Analyze Patterns",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "comparator": "equals",
+              "value1": "{{ $json.hasAnomalies }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "if_anomaly",
+      "name": "Has Anomaly?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "username": "Pattern Monitor",
+        "content": "={ `\u26a0\ufe0f **PATTERN ANOMALY DETECTED**\n\n\u2022 **Total Events (15 min)**: ${ $json.totalEvents }\n\u2022 **Person Count**: ${ $json.personCount }\n\u2022 **Vehicle Count**: ${ $json.vehicleCount }\n\n**Anomalies:**\n${ $json.anomalies.map(a => `\u2022 ${a.type}: ${a.value}`).join(\"\\n\") }` }",
+        "credentialsType": "discordWebhookApi",
+        "webhookUrl": "={{ $credentials.webhookUrl }}"
+      },
+      "id": "discord_anomaly",
+      "name": "Discord - Anomaly Alert",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        850,
+        200
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "debug_silent",
+      "name": "Debug - Silent Log",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        850,
+        400
+      ]
+    }
+  ],
+  "connections": {
+    "schedule_15min": {
+      "main": [
+        [
+          {
+            "node": "function_analyze",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "function_analyze": {
+      "main": [
+        [
+          {
+            "node": "if_anomaly",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "if_anomaly": {
+      "main": [
+        [
+          {
+            "node": "discord_anomaly",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "debug_silent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

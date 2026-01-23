@@ -1,0 +1,148 @@
+{
+  "name": "01 - Detection Alert to Mail",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "vision/ai-detection",
+        "options": {}
+      },
+      "id": "01b4f635-ba45-47db-a36b-0c3b02342b25",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "48934458-02e8-4824-819e-5c29df43ebce"
+    },
+    {
+      "parameters": {
+        "fromEmail": "vision-system@example.com",
+        "toEmail": "admin@example.com",
+        "subject": "={{ '\ud83d\udea8 CRITICAL: AI-Generated Image Detected (' + ($json.body.confidence_score * 100).toFixed(0) + '%)' }}",
+        "html": "={{ '<h2 style=\"color: red;\">\ud83d\udea8 CRITICAL ALERT</h2><p><strong>AI-Generated Content Detected</strong></p><table style=\"border-collapse: collapse; width: 100%;\"><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Event ID</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + $json.body.event_id + '</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Confidence</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + ($json.body.confidence_score * 100).toFixed(1) + '%</td></tr><tr><td style=\"padding: 8px; border: 1px solid #ddd;\"><strong>Time</strong></td><td style=\"padding: 8px; border: 1px solid #ddd;\">' + $json.body.timestamp + '</td></tr></table><h3>Detected Signals:</h3><ul><li><strong>High-Frequency Suppression</strong>: ' + ($json.body.signals ? $json.body.signals.hf_suppression : 'N/A') + '</li><li><strong>Spectral Anomaly</strong>: ' + ($json.body.signals ? $json.body.signals.spectral_anomaly : 'N/A') + '</li><li><strong>Texture Uniformity</strong>: ' + ($json.body.signals ? $json.body.signals.texture_uniformity : 'N/A') + '</li></ul><p><strong>Action Required:</strong> Review and quarantine immediately.</p>' }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "604975aa-28e7-4b97-bde9-232513f631e9",
+      "name": "Send email",
+      "webhookId": "a9f82408-7591-439a-a7c4-39e6253142a9",
+      "credentials": {
+        "smtp": {
+          "id": "YOUR_SMTP_CREDENTIAL_ID",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "deca7e4a-699b-4cad-b6c1-1d46f521df14",
+              "leftValue": "={{ $json.body.confidence_score }}",
+              "rightValue": 0.75,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {
+          "ignoreCase": false
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "eaf0be56-215c-4908-b62c-a9e9896f0ace",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "fromEmail": "vision-system@example.com",
+        "toEmail": "admin@example.com",
+        "subject": "={{ '\ud83d\udea8 CRITICAL: AI-Generated Image Detected (' + ($json.body.confidence_score * 100).toFixed(0) + '%)' }}",
+        "html": "={{ '<h2 style=\"color: orange;\">\u26a0\ufe0f MEDIUM ALERT</h2><p><strong>Possible AI-Generated Content</strong></p><p>Event ID: ' + $json.body.event_id + '</p><p>Confidence: ' + ($json.body.confidence_score * 100).toFixed(1) + '%</p><p>Time: ' + $json.body.timestamp + '</p><p>This requires manual review. Not immediately critical.</p>' }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        160
+      ],
+      "id": "83315c60-9b8c-4841-af21-c53ce078e7f9",
+      "name": "Send email1",
+      "webhookId": "6c4206d6-47b6-4ea4-9ad4-85824c8ff026",
+      "credentials": {
+        "smtp": {
+          "id": "YOUR_SMTP_CREDENTIAL_ID",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send email1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "61bb5f49-5a32-4e9a-87de-16f7e7a867e4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3ed3895028c106ab256aa7d737c7791bccc4edb7c5b9e07115a302db9cdc700d"
+  },
+  "id": "0-fQoou_gwHCw8xc8XXRi",
+  "tags": []
+}

@@ -12,7 +12,10 @@
       "name": "Webhook Trigger",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
-      "position": [250, 300],
+      "position": [
+        250,
+        300
+      ],
       "webhookId": "vision-to-action-anomaly"
     },
     {
@@ -20,13 +23,13 @@
         "conditions": {
           "string": [
             {
-              "value1": "={{ $json.severity }}",
-              "operation": "equals",
+              "value1": "={{ $json.body.severity }}",
+              "operation": "equal",
               "value2": "high"
             },
             {
-              "value1": "={{ $json.severity }}",
-              "operation": "equals",
+              "value1": "={{ $json.body.severity }}",
+              "operation": "equal",
               "value2": "critical"
             }
           ]
@@ -37,22 +40,28 @@
       "name": "Check Severity",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
-      "position": [450, 300]
+      "position": [
+        450,
+        300
+      ]
     },
     {
       "parameters": {
-        "functionCode": "const anomaly = $input.first().json;\n\nconst emailBody = `\n⚠️ ANOMALY DETECTED ⚠️\n======================\n\nAnomaly ID: ${anomaly.anomaly_id}\nSeverity: ${anomaly.severity.toUpperCase()}\nTimestamp: ${anomaly.timestamp}\n\nDescription:\n${anomaly.description}\n\nEvent ID: ${anomaly.event_id}\n\nGemini Analysis:\n${anomaly.gemini_explanation || 'Not available'}\n\nRecommended Actions:\n${anomaly.recommended_actions || 'Manual review required'}\n\nThis requires immediate attention.\n`;\n\nreturn {\n  subject: `🚨 CRITICAL ANOMALY: ${anomaly.anomaly_type}`,\n  body: emailBody,\n  anomaly_id: anomaly.anomaly_id,\n  severity: anomaly.severity\n};"
+        "jsCode": "return $input.all().map(item => {\n  const anomaly = item.json.body || item.json;\n  \n  const emailBody = `\n\u26a0\ufe0f ANOMALY DETECTED \u26a0\ufe0f\n======================\n\nAnomaly ID: ${anomaly.anomaly_id || 'N/A'}\nSeverity: ${(anomaly.severity || 'UNKNOWN').toUpperCase()}\nTimestamp: ${anomaly.timestamp || 'N/A'}\n\nDescription:\n${anomaly.description || 'N/A'}\n\nEvent ID: ${anomaly.event_id || 'N/A'}\n\nGemini Analysis:\n${anomaly.gemini_explanation || 'Not available'}\n\nRecommended Actions:\n${anomaly.recommended_actions || 'Manual review required'}\n\nThis requires immediate attention.\n`;\n\n  return {\n    json: {\n      subject: `\ud83d\udea8 CRITICAL ANOMALY: ${anomaly.anomaly_type || 'Unknown Type'}`,\n      body: emailBody,\n      anomaly_id: anomaly.anomaly_id,\n      severity: anomaly.severity\n    }\n  };\n});"
       },
       "id": "format-alert",
       "name": "Format Alert",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
-      "position": [650, 200]
+      "position": [
+        650,
+        200
+      ]
     },
     {
       "parameters": {
-        "fromEmail": "vision-to-action@example.com",
-        "toEmail": "critical-alerts@example.com",
+        "fromEmail": "vision-system@example.com",
+        "toEmail": "admin@example.com",
         "subject": "={{ $json.subject }}",
         "emailType": "text",
         "message": "={{ $json.body }}"
@@ -61,27 +70,24 @@
       "name": "Send Critical Alert",
       "type": "n8n-nodes-base.emailSend",
       "typeVersion": 2,
-      "position": [850, 200]
+      "position": [
+        850,
+        200
+      ]
     },
     {
       "parameters": {
-        "url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "text",
-              "value": "🚨 Critical anomaly detected: {{ $json.subject }}"
-            }
-          ]
-        },
-        "options": {}
+        "webhookUri": "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN",
+        "content": "={{ '🚨 **CRITICAL ANOMALY DETECTED**\\n\\n• **Type:** ' + $json.body.anomaly_type + '\\n• **Severity:** ' + $json.body.severity.toUpperCase() + '\\n• **Description:** ' + $json.body.description + '\\n• **Gemini:** ' + $json.body.gemini_explanation }}"
       },
-      "id": "slack-notification",
-      "name": "Slack Notification",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [650, 400]
+      "id": "discord-notification",
+      "name": "Discord Notification",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        650,
+        400
+      ]
     },
     {
       "parameters": {
@@ -92,7 +98,10 @@
       "name": "Log Escalation",
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2,
-      "position": [850, 400]
+      "position": [
+        850,
+        400
+      ]
     },
     {
       "parameters": {
@@ -103,7 +112,10 @@
       "name": "Webhook Response",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [1050, 300]
+      "position": [
+        1050,
+        300
+      ]
     }
   ],
   "connections": {

@@ -12,7 +12,10 @@
       "name": "Webhook Trigger",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
-      "position": [250, 300],
+      "position": [
+        250,
+        300
+      ],
       "webhookId": "vision-to-action-detection"
     },
     {
@@ -20,7 +23,7 @@
         "conditions": {
           "number": [
             {
-              "value1": "={{ $json.confidence }}",
+              "value1": "={{ $json.body.confidence }}",
               "operation": "larger",
               "value2": 0.7
             }
@@ -31,17 +34,23 @@
       "name": "Check Confidence",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
-      "position": [450, 300]
+      "position": [
+        450,
+        300
+      ]
     },
     {
       "parameters": {
-        "functionCode": "const event = $input.first().json;\n\nconst emailBody = `\nVision-to-Action Alert\n======================\n\nEvent ID: ${event.event_id}\nTimestamp: ${event.timestamp}\n\nDetection Summary:\n- Class: ${event.class_name}\n- Confidence: ${(event.confidence * 100).toFixed(2)}%\n- Location: (${event.bbox.x1}, ${event.bbox.y1}) to (${event.bbox.x2}, ${event.bbox.y2})\n\nImage: ${event.image_path}\nDevice: ${event.device}\n\nThis is an automated alert from the Vision-to-Action system.\n`;\n\nreturn {\n  subject: `🔔 High-Confidence Detection: ${event.class_name}`,\n  body: emailBody,\n  event_id: event.event_id,\n  class_name: event.class_name,\n  confidence: event.confidence\n};"
+        "jsCode": "return $input.all().map(item => {\n  const event = item.json.body || item.json;\n  const emailBody = `\nVision-to-Action Alert\n======================\n\nEvent ID: ${event.event_id}\nTimestamp: ${event.timestamp}\n\nDetection Summary:\n- Class: ${event.class_name}\n- Confidence: ${(event.confidence * 100).toFixed(2)}%\n- Location: (${event.bbox.x1}, ${event.bbox.y1}) to (${event.bbox.x2}, ${event.bbox.y2})\n\nImage: ${event.image_path}\nDevice: ${event.device}\n\nThis is an automated alert from the Vision-to-Action system.\n`;\n\n  return {\n    json: {\n      subject: `\ud83d\udd14 High-Confidence Detection: ${event.class_name}`,\n      body: emailBody,\n      event_id: event.event_id,\n      class_name: event.class_name,\n      confidence: event.confidence\n    }\n  };\n});"
       },
       "id": "format-email",
       "name": "Format Email",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
-      "position": [650, 200]
+      "position": [
+        650,
+        200
+      ]
     },
     {
       "parameters": {
@@ -55,7 +64,10 @@
       "name": "Send Email Alert",
       "type": "n8n-nodes-base.emailSend",
       "typeVersion": 2,
-      "position": [850, 200]
+      "position": [
+        850,
+        200
+      ]
     },
     {
       "parameters": {
@@ -65,19 +77,19 @@
           "parameters": [
             {
               "name": "event_id",
-              "value": "={{ $json.event_id }}"
+              "value": "={{ $json.body.event_id }}"
             },
             {
               "name": "class_name",
-              "value": "={{ $json.class_name }}"
+              "value": "={{ $json.body.class_name }}"
             },
             {
               "name": "confidence",
-              "value": "={{ $json.confidence }}"
+              "value": "={{ $json.body.confidence }}"
             },
             {
               "name": "timestamp",
-              "value": "={{ $json.timestamp }}"
+              "value": "={{ $json.body.timestamp }}"
             }
           ]
         },
@@ -87,18 +99,24 @@
       "name": "Send Webhook",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
-      "position": [650, 400]
+      "position": [
+        650,
+        400
+      ]
     },
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO detection_alerts (event_id, class_name, confidence, timestamp) VALUES ('{{ $json.event_id }}', '{{ $json.class_name }}', {{ $json.confidence }}, '{{ $json.timestamp }}')"
+        "query": "INSERT INTO detection_alerts (event_id, class_name, confidence, timestamp) VALUES ('{{ $json.body.event_id }}', '{{ $json.body.class_name }}', {{ $json.body.confidence }}, '{{ $json.body.timestamp }}')"
       },
       "id": "log-to-db",
       "name": "Log to Database",
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2,
-      "position": [850, 400]
+      "position": [
+        850,
+        400
+      ]
     },
     {
       "parameters": {
@@ -109,7 +127,10 @@
       "name": "Webhook Response",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [1050, 300]
+      "position": [
+        1050,
+        300
+      ]
     }
   ],
   "connections": {

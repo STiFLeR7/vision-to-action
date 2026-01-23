@@ -1,0 +1,49 @@
+{
+  "name": "01 - Detection Alert to Discord",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "vision/detection",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "webhook_trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "username": "Vision System",
+        "content": "={{ '\ud83d\udea8 **DETECTION ALERT**\\n\\n\u2022 **Event ID**: ' + $json.body.event_id + '\\n\u2022 **Time**: ' + $json.body.timestamp + '\\n\u2022 **Type**: ' + $json.body.detection_class + '\\n\u2022 **Confidence**: ' + ($json.body.confidence * 100).toFixed(1) + '%\\n\u2022 **Location**: ' + ($json.body.location || \"Unknown\") }}",
+        "credentialsType": "discordWebhookApi",
+        "webhookUrl": "={{ $credentials.webhookUrl }}"
+      },
+      "id": "discord_alert",
+      "name": "Discord Notification",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "webhook_trigger": {
+      "main": [
+        [
+          {
+            "node": "discord_alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

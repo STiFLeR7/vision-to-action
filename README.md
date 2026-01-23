@@ -41,30 +41,35 @@
 ## ✨ Key Features
 
 ### 🔍 **Advanced Computer Vision**
+
 - **YOLOv8 nano** optimized for 6GB VRAM (37 FPS average)
 - **FP16 precision** for 2x speed improvement
 - **Conditional segmentation** (patch-based, triggered on demand)
 - **imgshape v4 integration** for dataset governance
 
 ### 🤖 **AI-Generated Image Detection**
+
 - **11 detection signals**: Spectral analysis, Benford's Law, LBP texture, gradient smoothness, noise patterns, and more
 - **68% detection rate** on test dataset
 - **Multi-scale analysis**: FFT, patch coherence, edge consistency
 - **Production-ready**: Integrated into main inference pipeline
 
 ### 📊 **Structured Ingestion**
+
 - **Pydantic schemas** for type-safe event validation
 - **Date-organized storage** (YYYY/MM/DD hierarchy)
 - **JSON-first** with optional database backends
 - **Temporal indexing** for efficient retrieval
 
 ### 🧠 **LLM Cognition**
+
 - **Gemini 2.0 Flash** for natural language understanding
 - **Scene summarization** with spatial and confidence analysis
 - **Anomaly explanation** for edge cases
 - **Temporal pattern analysis** across event sequences
 
 ### ⚡ **Workflow Orchestration**
+
 - **n8n integration** for automated actions
 - **Webhook triggers** based on detection events
 - **Alert workflows** for anomalies and thresholds
@@ -102,7 +107,11 @@
 ### Component Breakdown
 
 #### 1. **AI Detection Layer** 🆕
-```python
+
+```
+![AI Detection Capability](assets/n8n/ai_detection.png)
+*Figure: AI Detection module identifying synthetic imagery with detailed signal analysis (68% confidence).*
+python
 from cv.analysis.ai_detection import AIImageDetector
 
 detector = AIImageDetector()
@@ -111,6 +120,7 @@ result = detector.analyze("image.png")
 ```
 
 **Detection Signals (11 total)**:
+
 1. **Dimension Match** - Common AI sizes (512², 1024², etc.)
 2. **Spectral Analysis** - FFT radial power spectrum slopes
 3. **Local Binary Patterns** - Texture uniformity (LBP entropy)
@@ -124,6 +134,7 @@ result = detector.analyze("image.png")
 11. **EXIF Metadata** - Camera metadata presence (weak signal)
 
 #### 2. **Perception Layer**
+
 ```python
 from cv.detection import YOLOv8Detector
 
@@ -137,6 +148,7 @@ results = detector.detect(image)
 ```
 
 **Features**:
+
 - YOLOv8 nano (6MB model) optimized for 6GB VRAM
 - FP16 mixed precision (2x speedup)
 - Configurable confidence/IOU thresholds
@@ -144,6 +156,7 @@ results = detector.detect(image)
 - Optional imgshape preprocessing
 
 #### 3. **Ingestion Layer**
+
 ```python
 from ingestion.schemas import PerceptionEvent
 from ingestion.storage import JSONStorageBackend
@@ -154,6 +167,7 @@ storage.store_event(event)
 ```
 
 **Schema Structure**:
+
 ```python
 PerceptionEvent:
   - event_id: str
@@ -166,6 +180,7 @@ PerceptionEvent:
 ```
 
 #### 4. **Cognition Layer**
+
 ```python
 from cognition.gemini import GeminiReasoner
 
@@ -174,12 +189,14 @@ summary = reasoner.summarize_event(event)
 ```
 
 **Capabilities**:
+
 - Scene summarization with spatial analysis
 - Anomaly explanation and recommendations
 - Temporal pattern detection across events
 - Multi-event trend analysis
 
 #### 5. **Orchestration Layer**
+
 ```yaml
 # n8n workflow example
 trigger: webhook
@@ -226,6 +243,7 @@ cp .env.example .env
 ### Configuration
 
 Create `.env` file:
+
 ```bash
 GEMINI_API_KEY=your_api_key_here
 IMGSHAPE_BASE_URL=http://localhost:8000
@@ -386,6 +404,7 @@ augmentation:
 ### Test Dataset
 
 Located in `data/test/` - 22 diverse images including:
+
 - Real photographs (JPEG with EXIF)
 - AI-generated graphics (Midjourney, DALL-E style)
 - Design mockups and diagrams
@@ -398,6 +417,7 @@ python scripts/evaluate_system.py
 ```
 
 **Metrics Collected**:
+
 - **Perception**: FPS, latency, mAP, confidence scores
 - **AI Detection**: Detection rate, signal analysis, false positives
 - **Ingestion**: Storage latency, event sizes, validation errors
@@ -407,6 +427,7 @@ python scripts/evaluate_system.py
 ### Results Summary
 
 Latest evaluation (`eval/summary_20260122_075116.json`):
+
 ```json
 {
   "perception": {
@@ -546,11 +567,13 @@ for img_path, result in zip(image_dir.glob("*.jpg"), results):
 ### imgshape v4 (Atlas)
 
 **Integration Points**:
+
 - **Preprocessing**: Image validation and normalization
 - **Dataset Management**: Version control and cataloging
 - **Quality Assurance**: Automated validation pipelines
 
 **Usage**:
+
 ```python
 # imgshape service assumed at localhost:8000
 # Preprocessing via REST API
@@ -565,6 +588,7 @@ response = requests.post(
 ### Gemini API
 
 **Configuration**:
+
 ```python
 # .env file
 GEMINI_API_KEY=your_key_here
@@ -580,16 +604,19 @@ reasoner = GeminiReasoner(
 ```
 
 **API Endpoints Used**:
+
 - `POST https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent`
 
 ### n8n Workflows
 
 **Workflow Templates** (`orchestration/n8n/workflows/`):
+
 1. **Detection Alert** - Trigger on high-confidence detections
 2. **Anomaly Escalation** - Escalate unusual patterns
 3. **Batch Processing** - Scheduled bulk analysis
 
 **Integration**:
+
 ```javascript
 // n8n webhook trigger
 {
@@ -667,6 +694,7 @@ Contributions are welcome! Please follow these guidelines:
 5. Open a Pull Request
 
 **Coding Standards**:
+
 - Follow PEP 8 style guide
 - Add type hints to all functions
 - Write docstrings for public APIs
@@ -698,9 +726,56 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 🔄 Orchestration v2 (n8n)
+
+The orchestration layer has been upgraded (v2) to support agentic routing, self-healing workflows, and standardized error handling. All workflows are located in `orchestration/n8n/`.
+
+### 1. Detection Alert (Discord)
+
+**File:** `01_detection_alert_discord.json`
+Sends real-time notifications to Discord for high-confidence detections.
+![Discord Alert](assets/n8n/01_discord_alert.png)
+
+### 2. AI Detection Alert (Email)
+
+**File:** `02_ai_detection_email.json`
+Routes AI-generated image alerts via Email with detailed signal analysis.
+![Email Alert](assets/n8n/02_mail_alert.png)
+
+### 3. Smart Routing
+
+**File:** `03_smart_routing.json`
+Intelligently routes events based on class (e.g., 'person' -> Discord, 'vehicle' -> Email).
+![Smart Routing](assets/n8n/03_smart_routing_mail.png)
+
+### 4. Temporal Patterns
+
+**File:** `04_temporal_patterns.json`
+Analyzes event sequences to detect anomalies over time using scheduled batch processing.
+
+### 5. Anomaly Escalation
+
+**File:** `05_anomaly_escalation.json`
+Escalates critical anomalies to Discord and logs to Postgres.
+![Anomaly Escalation](assets/n8n/05_anomaly_escalation.png)
+
+### 6. Detection Alert (Comprehensive)
+
+**File:** `06_detection_alert.json`
+Full-featured alert logic including image cropping and detailed metadata.
+![Detection Alert](assets/n8n/06_detection_alert.png)
+
+### 7. AI Detection Email
+
+A Gmail screenshot showing a CRITICAL ALERT email reporting AI-generated image detection with 88% confidence, listing signals like spectral anomaly and texture uniformity, and urging immediate review/quarantine.
+![AI Detection Alert](assets/n8n/ai_detection.png)  
+
+---
+
 ## 🗺️ Roadmap
 
 ### ✅ Completed
+
 - [x] Hardware-optimized YOLOv8 detection
 - [x] AI-generated image detection (11 signals)
 - [x] Structured ingestion with Pydantic
@@ -709,11 +784,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] n8n workflow templates
 
 ### 🚧 In Progress
+
 - [ ] Real-time video stream processing
 - [ ] Multi-model ensemble detection
 - [ ] Advanced imgshape REST integration
 
 ### 🔮 Planned
+
 - [ ] WebSocket API for real-time updates
 - [ ] Cloud deployment (AWS/GCP)
 - [ ] Mobile app integration
@@ -751,8 +828,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *Last Updated: January 22, 2026*
 
-   - Webhook triggers
-   - Escalation workflows
+- Webhook triggers
+- Escalation workflows
 
 ### imgshape v4 Integration
 
@@ -776,24 +853,28 @@ Vision-to-Action is governed by **imgshape v4 (Atlas)**:
 ### Setup
 
 1. **Clone repository**
+
 ```bash
 git clone https://github.com/STiFLeR7/vision-to-action.git
 cd vision-to-action
 ```
 
-2. **Install dependencies**
+1. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Configure environment**
+1. **Configure environment**
+
 ```bash
 # Create .env file
 echo "GEMINI_API_KEY=your_key_here" > .env
 echo "IMGSHAPE_BASE_URL=http://localhost:8000" >> .env
 ```
 
-4. **Verify imgshape symlink**
+1. **Verify imgshape symlink**
+
 ```bash
 # Should point to D:/imgshape
 ls -la imgshape/
@@ -977,6 +1058,7 @@ MIT License - See LICENSE file
 ## Acknowledgments
 
 Built on:
+
 - [imgshape](https://github.com/STiFLeR7/imgshape) - Shape governance
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) - Object detection
 - [Google Gemini API](https://ai.google.dev/) - LLM reasoning
