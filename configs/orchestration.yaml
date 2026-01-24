@@ -32,18 +32,28 @@ n8n:
       destination: "file"  # file | database | remote
       
 # Workflow templates
+# Workflow templates configuration
 workflows:
-  detection_alert:
-    description: "Alert on high-confidence detections"
-    trigger: "confidence_threshold"
-    actions: ["email", "webhook", "logging"]
+  detection_alert_discord:
+    description: "01 - Real-time Discord notifications"
+    path: "/webhook/vision/detection-discord"
+    
+  detection_alert_email:
+    description: "02 - AI Detection Alerts via Email"
+    path: "/webhook/vision/ai-detection"
+    
+  smart_routing:
+    description: "03 - Class-based routing (Person->Discord, Vehicle->Email)"
+    path: "/webhook/vision/smart-route"
+    
+  temporal_patterns:
+    description: "04 - Batch analysis trigger"
+    path: "/webhook/vision/temporal-analysis"
     
   anomaly_escalation:
-    description: "Escalate repeated anomalies"
-    trigger: "repeated_detection_count"
-    actions: ["email", "logging"]
+    description: "05 - Critical anomaly escalation"
+    path: "/webhook/vision-to-action-anomaly"
     
-  quality_check:
-    description: "Trigger on imgshape quality issues"
-    trigger: "imgshape_compatibility_failure"
-    actions: ["email", "logging"]
+  detection_alert:
+    description: "06 - Comprehensive detection alert"
+    path: "/webhook/vision-to-action-detection"

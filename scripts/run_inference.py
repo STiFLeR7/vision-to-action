@@ -155,40 +155,56 @@ def run_inference_pipeline(
     # 4. ACTION: n8n Orchestration
     if enable_orchestration:
         print(f"\n4️⃣  ACTION LAYER")
-        print(f"   Checking trigger conditions...")
+        print(f"   Orchestrating workflows via n8n...")
         
-        # Check for high-confidence detections
-        high_confidence_detections = [d for d in detections if d.confidence >= confidence_threshold]
-        
-        if high_confidence_detections:
-            print(f"   ⚡ Triggering n8n workflow ({len(high_confidence_detections)} high-confidence detections)")
+        try:
+            from orchestration.n8n.notifier import N8NOrchestrator
+            orchestrator = N8NOrchestrator(config_manager)
             
-            orchestration_config = config_manager.get_orchestration_config()
-            webhook_url = f"{orchestration_config['n8n']['base_url']}{orchestration_config['n8n']['webhook_path']}"
-            
-            for det in high_confidence_detections:
-                payload = {
+            # Workflow 02: AI Detection Alert
+            if ai_result['verdict'] == 'AI-Generated' or ai_result['ai_confidence'] > 0.5:
+                print(f"   ⚡ Triggering AI Detection Alert (Email)...")
+                orchestrator.trigger_detection_alert_email({
                     "event_id": event.event_id,
                     "timestamp": event.timestamp.isoformat(),
-                    "class_name": det.class_name,
-                    "confidence": det.confidence,
-                    "bbox": {
-                        "x1": det.bbox.x1,
-                        "y1": det.bbox.y1,
-                        "x2": det.bbox.x2,
-                        "y2": det.bbox.y2
-                    },
-                    "image_path": image_path,
-                    "device": system_config.hardware['target_device']
-                }
+                    "confidence_score": ai_result['ai_confidence'],
+                    "signals": ai_result.get('signals', {}), # Assuming signals are part of result
+                    "verdict": ai_result['verdict']
+                })
+
+            # Check for high-confidence detections
+            high_confidence_detections = [d for d in detections if d.confidence >= confidence_threshold]
+            
+            if high_confidence_detections:
+                print(f"   ⚡ Processing {len(high_confidence_detections)} detections for Smart Routing...")
                 
-                try:
-                    response = requests.post(webhook_url, json=payload, timeout=5)
-                    print(f"   ✓ Webhook triggered for {det.class_name} (confidence: {det.confidence:.2f})")
-                except Exception as e:
-                    print(f"   ⚠️  Webhook failed: {e}")
-        else:
-            print(f"   No high-confidence detections (threshold: {confidence_threshold})")
+                for det in high_confidence_detections:
+                    payload = {
+                        "event_id": event.event_id,
+                        "timestamp": event.timestamp.isoformat(),
+                        "class_name": det.class_name,
+                        "confidence": det.confidence,
+                        "detection_class": det.class_name, # Alias for smart routing
+                        "location": "Main Camera Feed", # Placeholder
+                        "bbox": {
+                            "x1": det.bbox.x1, "y1": det.bbox.y1,
+                            "x2": det.bbox.x2, "y2": det.bbox.y2
+                        },
+                        "image_path": image_path,
+                        "device": system_config.hardware['target_device']
+                    }
+                    
+                    # Workflow 03: Smart Routing
+                    orchestrator.trigger_smart_routing(payload)
+                    
+                    # Workflow 06: Comprehensive Alert (Logging)
+                    orchestrator.trigger_comprehensive_alert(payload)
+
+            else:
+                print(f"   No high-confidence detections to route (threshold: {confidence_threshold})")
+                
+        except Exception as e:
+            print(f"   ⚠️  Orchestration failed: {e}")
     
     print(f"\n{'='*60}")
     print(f"Pipeline complete!")
